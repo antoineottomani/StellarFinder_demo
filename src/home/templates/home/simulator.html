@@ -26,7 +26,6 @@
 			<!-- Choose which equipment to use -->
 			<div class="inputs-container">
 
-				{% if user.is_authenticated or demo_mode %}
 				<div class="text">Choix du matériel :
 					<div id="Equipment" data-url-equipment="{% url 'equipement' %}">
 						<div class="dropdown mb-2">
@@ -39,15 +38,13 @@
 					</div>
 				</div>
 
-				{% else %}
 				<div class="cta">
-					<p>Vous devez être connecté pour choisir votre équipement</p>
+					<p>la création d'un compte n'est pas autorisé en mode démo</p>
 					<div class="cta-btn">
 						<a class="btn btn-primary" href="{% url 'connexion' %}">Se connecter</a>
 						<a class="btn btn-secondary" href="{% url 'inscription' %}">S'inscrire</a>
 					</div>
 				</div>
-				{% endif %}
 			</div>
 		</div>
 

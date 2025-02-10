@@ -11,11 +11,9 @@
 
 			<h1>Inscription</h1>
 
-			{% if is_demo %}
 			<p class="text-warning">L'inscription est désactivée en mode démo.</p>
-			{% endif %}
-
-			<form method="post" class="signup-form" id="signupForm" novalidate {% if is_demo %}disabled{% endif %}>
+	
+			<form method="post" class="signup-form" id="signupForm" novalidate disabled>
 				{% csrf_token %}
 
 				<!-- Display form errors here -->
@@ -98,8 +96,7 @@
 				</div>
 
 
-				<input id="form-btn" type="submit" value="S'inscrire" class="btn btn-primary"
-					{% if is_demo %}disabled{% endif %}>
+				<input id="form-btn" type="submit" value="S'inscrire" class="btn btn-primary" disabled>
 
 			</form>
 

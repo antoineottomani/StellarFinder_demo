@@ -4,19 +4,13 @@
 
 	<div class="container-fluid">
 
-		<!-- Show button to trigger weather only on home page -->
-		<!-- {% if request.path == home_url %}
-			<a class="weather-btn" href="">
-				<img class="weather-btn-img" src="{% static 'img/weather_icons/burger_white.png' %}" alt="icone pour le widget météo">
-			</a>
-		{% endif %} -->
-
+		<!-- Logo and site name -->
 		<a class="navbar-brand text-white" href="{% url 'accueil' %}">
-			<img src="{% static 'img/logo.png' %}" class="logo" alt="logo du site stellar finder">
+			<img src="{% static 'img/logo.svg' %}" class="logo" alt="logo du site stellar finder">
 			<span>Stellar Finder</span>
 		</a>
 
-		<!-- Burger icon for responsive -->
+		<!-- Responsive icon -->
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<img src="{% static 'img/responsive-menu.svg' %}" class="icon-responsive-menu" alt="icone menu">
@@ -29,44 +23,26 @@
 					<a class="nav-link text-white" href="{% url 'accueil' %}">Accueil</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-white" href="{% url 'compte-demo' %}">Compte demo</a>
+					<a class="nav-link text-white" href="{% url 'compte-demo' %}">Compte démo</a>
 				</li>
-
-				{#				{% if request.path == home_url %}#}
-				{#					<li class="nav-item d-lg-none">#}
-				{#						<a class="nav-link text-white" href="">#}
-				{#							<img src="{% static 'img/weather_icons/burger_white.png' %}" alt="icone pour le widget météo" class="weather-btn-img">#}
-				{#							Météo#}
-				{#						</a>#}
-				{#					</li>#}
-				{#				{% endif %}#}
-
-				{% if user.is_authenticated %}
-				<li class="nav-item">
-					<a class="nav-link text-white" href="{% url 'mon-compte' %}">Mon compte</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-white" href="{% url 'deconnexion' %}">Déconnexion</a>
-				</li>
-
-				{% else %}
 				<li class="nav-item">
 					<a class="nav-link text-white" href="{% url 'connexion' %}">Connexion</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link text-white" href="{% url 'inscription' %}">Inscription</a>
 				</li>
-				{% endif %}
+
+				<!-- Button to trigger weather only on home page
+				{% if request.path == home_url %}
+				<li class="nav-item d-lg-none">
+					<a class="nav-link text-white" href="">
+						<img src="{% static 'img/weather_icons/burger_white.png' %}" alt="icone pour le widget météo" class="weather-btn-img">
+						Météo
+					</a>
+				</li>
+				{% endif %} -->
 			</ul>
-
-			<!-- Show button to trigger weather only on home page and only on larger screens -->
-			{#			{% if request.path == home_url %}#}
-			{#				<a class="weather-btn d-none d-lg-inline-block order-lg-1" href="">#}
-			{#					<img class="weather-btn-img" src="{% static 'img/weather_icons/burger_white.png' %}" alt="icone pour le widget météo">#}
-			{#				</a>#}
-			{#			{% endif %}#}
 		</div>
-
 	</div>
 
 </nav>
