@@ -1,0 +1,97 @@
+@media (max-width: 767.98px) { // Media query for mobile devices
+  main {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-brand {
+      display: flex;
+      font-size: 1em;
+    }
+
+    .weather-btn {
+      display: none;
+    }
+
+
+    .navbar-toggler {
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      img {
+        width: 50px;
+
+      }
+    }
+
+    .navbar-nav {
+      text-align: right;
+    }
+  }
+
+  .weather-block {
+    display: none;
+  }
+
+  .simulator-block {
+    width: 100%;
+  }
+;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-brand {
+      display: flex;
+      font-size: 1em;
+    }
+
+    .weather-btn {
+      display: none;
+    }
+
+
+    .navbar-toggler {
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      img {
+        width: 50px;
+
+      }
+    }
+
+    .navbar-nav {
+      text-align: right;
+    }
+  }
+
+  .simulator-block {
+    width: 100%;
+  }
+
+  .weather-block {
+    display: none;
+  }
+
+
+}

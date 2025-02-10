@@ -1,0 +1,133 @@
+$primary: #0C1218;
+$secondary: #17202A;
+$tertiary: #FB7D00;
+
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Open Sans", sans-serif;
+
+@mixin h1-style {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: $font-primary;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+@mixin h2-style {
+  font-size: 1.2em;
+  text-align: center;
+  color: #ffffff;
+  font-family: $font-secondary;
+}
+
+@mixin h3-style {
+  font-size: 1em;
+  font-family: $font-secondary;
+  text-align: center;
+  color: #ffffff;
+}
+
+// Pour les icones : ajouter / modifier / supprimer
+@mixin account-icon {
+  width: 20px;
+}
+
+// Import scss Bootstrap
+@import "../Bootstrap/_functions.scss";
+@import "../Bootstrap/_variables.scss";
+@import "../Bootstrap/_maps.scss";
+@import "../Bootstrap/_utilities.scss";
+@import "../Bootstrap/_mixins.scss";
+
+
+// Import custom scss
+@import "user.scss";
+@import "weather.scss";
+@import "astro.scss";
+@import "responsive.scss";
+
+
+// Globals customs rules
+*, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+    .home-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px auto;
+      padding: 0;
+      width: 100%;
+    }
+
+    nav {
+      border-bottom: 1px solid white;
+
+      .weather-btn {
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+        margin-left: 10px;
+
+        .weather-btn-img {
+          width: 30px;
+        }
+      }
+
+      .navbar-brand {
+        margin-left: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-primary;
+
+
+        .logo {
+          width: 2.5em;
+          margin-right: 0.6em;
+        }
+
+        span {
+          font-size: 1.2em;
+          font-weight: 300;
+          font-style: normal;
+        }
+      }
+
+
+      ul li {
+        font-family: $font-primary;
+        font-weight: 300;
+        font-style: normal;
+      }
+    }
+
+    footer {
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+      font-family: "Poppins", sans-serif;
+
+
+      .footer-text p {
+        margin: 0 auto;
+      }
+
+    }
+  }
+}
+
+
+@import "../Bootstrap/bootstrap.scss";

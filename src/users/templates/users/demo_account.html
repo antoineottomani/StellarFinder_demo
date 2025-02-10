@@ -1,0 +1,23 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block title %}Mon compte{% endblock %}
+
+{% block content %}
+<div class="container-fluid row">
+  <section class="account-section">
+    <div class="profile-header">
+      <img src="{% static 'img/user.svg' %}" alt="icone de profil pour utilisateur" />
+      <h1>Bienvenue sur le compte de démo</h1>
+    </div>
+
+    <div class="goto-button">
+      <a href="{% url 'accueil' %}" class="btn btn-primary">
+        <img src="{% static 'img/rocket.svg' %}" alt="icone pour voir simulateur" />
+        Voir le simulateur
+      </a>
+    </div>
+
+    {% include 'equipment/demo_materiel.html' %}
+  </section>
+</div>
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block content %}
+
+<section class="login-section mt-0">
+	<div class="row justify-content-center">
+
+		<div class="login-content col-10 col-sm-7 col-md-6 col-lg-4">
+			<h1>Connexion</h1>
+
+			{% if is_demo %}
+			<p class="text-warning">Les fonctionnalités de connexion sont désactivées en mode démo.</p>
+			{% endif %}
+
+			<form method="post" class="login-form">
+				{% csrf_token %}
+
+				<!-- Display main form errors -->
+				{% if form.non_field_errors %}
+				<div class="general-errors alert alert-warning">
+					{% for error in form.non_field_errors %}
+					{{ error }}
+					{% endfor %}
+				</div>
+				{% endif %}
+
+				<!-- Username input -->
+				<div class="input-group mb-3">
+					<label class="input-group-text" for="id_username"><i class="fa-solid fa-user"></i></label>
+					<input class="form-control" type="text" name="username" id="id_username"
+						placeholder="Nom d'utilisateur">
+				</div>
+
+				<!-- Errors for username field -->
+				{% for error in form.username.errors %}
+				<p id="form-error">{{ error }}</p>>
+				{% endfor %}
+
+				<!-- Password input-->
+				<div class="input-group mb-3">
+					<label class="input-group-text" for="id_password"><i class="fa-solid fa-lock"></i></label>
+					<input class="form-control" type="password" name="password" id="id_password"
+						placeholder="Mot de passe">
+				</div>
+
+				<!-- Errors for password field -->
+				{% for error in form.password.errors %}
+				<p id="form-error">{{ error }}</p>
+				{% endfor %}
+
+				<input type="hidden" name="next" value="{{ next }}">
+				<input id="form-btn" type="submit" value="Se connecter" class="btn btn-primary"
+					{% if is_demo %}disabled{% endif %}>
+			</form>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/Custom/user.js' %}"></script>
+{% endblock scripts %}

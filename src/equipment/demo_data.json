@@ -1,0 +1,13 @@
+{
+    "telescopes": [
+        {"id": 1, "model_name": "SkyWatcher", "aperture": 150, "focal_length": 750},
+        {"id": 2, "model_name": "SkyWatcher", "aperture": 300, "focal_length": 1500},
+        {"id": 3, "model_name": "SkyWatcher 80ED", "aperture": 80, "focal_length": 400}
+    ],
+    "cameras": [
+        {"id": 1, "model_name": "Canon EOS 700D", "sensor_type": "CMOS", "resolution_width": 5184, "resolution_height": 3456, "pixel_size": 4.3},
+        {"id": 2, "model_name": "Canon EOS 6D", "sensor_type": "CMOS", "resolution_width": 5472, "resolution_height": 3648, "pixel_size": 6.5},
+        {"id": 3, "model_name": "ZWO ASI 533MC Pro", "sensor_type": "CMOS", "resolution_width": 3008, "resolution_height": 3008, "pixel_size": 3.76},
+        {"id": 4, "model_name": "ZWO ASI 2600MC Pro", "sensor_type": "CMOS", "resolution_width": 6248, "resolution_height": 4176, "pixel_size": 3.76}
+    ]
+}

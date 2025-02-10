@@ -1,0 +1,118 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+	<section class="signup-section row justify-content-center">
+
+		<div class="signup-content col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+
+			<h1>Inscription</h1>
+
+			{% if is_demo %}
+			<p class="text-warning">L'inscription est désactivée en mode démo.</p>
+			{% endif %}
+
+			<form method="post" class="signup-form" id="signupForm" novalidate {% if is_demo %}disabled{% endif %}>
+				{% csrf_token %}
+
+				<!-- Display form errors here -->
+				{% if form.non_field_errors %}
+				<div class="alert alert-danger">
+					<ul>
+						{% for error in form.non_field_errors %}
+						<li>{{ error }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+
+				<!-- Username input -->
+				<div class="form-group">
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="id_username"><i class="fa-solid fa-user"></i></label>
+						<input class="form-control" type="text" name="username" id="id_username"
+							placeholder="Nom d'utilisateur" required>
+					</div>
+					<small class="form-text">{{ form.username.help_text }}</small>
+					<div class="text-danger small" id="usernameError"></div>
+
+					{% if form.username.errors %}
+					<div class="text-danger small">
+						{{ form.username.errors }}
+					</div>
+					{% endif %}
+				</div>
+
+				<!-- Email input -->
+				<div class="form-group">
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="id_email"><i class="fa-solid fa-envelope"></i></label>
+						<input class="form-control" type="email" name="email" id="id_email" placeholder="Adresse email"
+							required>
+					</div>
+					<small class="form-text">{{ form.email.help_text }}</small>
+					<div class="text-danger small" id="emailError"></div>
+
+					{% if form.email.errors %}
+					<div class="text-danger small">
+						{{ form.email.errors }}
+					</div>
+					{% endif %}
+				</div>
+
+				<!-- Password input -->
+				<div class="form-group">
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="id_password1"><i class="fa-solid fa-lock"></i></label>
+						<input class="form-control" type="password" name="password1" id="id_password1"
+							placeholder="Mot de passe" required>
+					</div>
+					<small class="form-text">{{ form.password1.help_text }}</small>
+					<div class="text-danger small" id="password1Error"></div>
+
+					{% if form.password1.errors %}
+					<div class="text-danger small">
+						{{ form.password1.errors }}
+					</div>
+					{% endif %}
+				</div>
+
+				<!-- Password 2 input -->
+				<div class="form-group">
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="id_password2"><i class="fa-solid fa-lock"></i></label>
+						<input class="form-control" type="password" name="password2" id="id_password2"
+							placeholder="Répéter le mot de passe" required>
+					</div>
+					<small class="form-text">{{ form.password2.help_text }}</small>
+					<div class="text-danger small" id="password2Error"></div>
+
+					{% if form.password2.errors %}
+					<div class="text-danger small">
+						{{ form.password2.errors }}
+					</div>
+					{% endif %}
+				</div>
+
+
+				<input id="form-btn" type="submit" value="S'inscrire" class="btn btn-primary"
+					{% if is_demo %}disabled{% endif %}>
+
+			</form>
+
+
+		</div>
+
+	</section>
+</div>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/Custom/user.js' %}"></script>
+{% endblock scripts %}

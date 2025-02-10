@@ -1,0 +1,413 @@
+// ! PARTIE INSCRIPTION
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .signup-content {
+    margin: 60px auto;
+    background-color: $secondary;
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    h1 {
+      @include h1-style;
+    }
+
+    .signup-form {
+      margin: 0 auto;
+      padding: 15px;
+
+      .form-group {
+        margin: 20px auto;
+
+        .input-group {
+          width: 100%;
+
+          .input-group-text {
+            border: 1px solid #ced4da;
+            border-right: 0;
+            color: #6c757d;
+          }
+
+          .form-control {
+            width: calc(100% - 40px); // Adjust to fit input group prepend
+            border-left: 0;
+          }
+        }
+
+        .form-text {
+          color: white;
+          font-size: 0.85em;
+          opacity: 0.8;
+        }
+
+        .text-danger {
+          ul {
+            border: 1px solid green;
+            padding: 0;
+            margin: 10px;
+            
+          }
+          
+
+        }
+      }
+
+      #form-btn {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+li {
+  list-style-type: none; // Enlève la puce des éléments de liste
+}
+
+
+// ! PARTIE CONNEXION
+.login-section {
+  font-family: "Poppins", sans-serif;
+
+  .login-content {
+    background-color: $secondary;
+    border-radius: 10px;
+    margin-top: 0;
+
+    h1 {
+      @include h1-style;
+    }
+
+    .login-form {
+      margin: 60px auto;
+      width: 100%;
+      padding: 15px;
+
+      .general-errors {
+        font-size: 0.9em;
+      }
+
+      #form-error {
+        font-size: 1.1em;
+        color: #ff3030;
+        text-align: left;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      #form-btn {
+        display: flex;
+        margin: 30px auto 0 auto;
+        font-size: 1em;
+        border: 1px solid white;
+      }
+    }
+  }
+}
+
+// ! PARTIE COMPTE DE L'UTILISATEUR
+.account-section {
+  background-color: $secondary;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  width: 100%;
+
+
+  .profile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+
+
+    img {
+      width: 50px;
+      margin-right: 40px;
+    }
+
+    h1 {
+      @include h1-style;
+    }
+  }
+
+  .goto-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #FFFFFF;
+    margin-top: 30px;
+
+    img {
+      width: 50px;
+      margin-right: 5px;
+    }
+
+  }
+
+
+  .user-equipment {
+    margin-top: 50px;
+    display: flex;
+
+    .btn[disabled] {
+    cursor: not-allowed;
+    background-color: #ccc;
+    border-color: #bbb;
+}
+
+
+    .equipment-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      font-size: 1em;
+
+      .card, .no-equipment {
+        background-color: $primary;
+        margin: 30px;
+        padding: 0;
+
+        .card-header {
+          background-color: $tertiary;
+          border-color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+
+          h2 {
+            @include h2-style;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+          }
+
+          button img {
+            width: 25px;
+
+          }
+        }
+
+        .list-group {
+          padding: 10px;
+          background-color: $primary;
+
+
+          .list-group-item {
+            color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $primary;
+            margin-top: 10px;
+            padding-bottom: 20px;
+
+
+            .telescope-details {
+              display: flex;
+              flex-direction: column;
+              justify-content: start;
+              align-items: start;
+
+              span {
+                font-family: $font-secondary;
+                font-size: 1em;
+                font-weight: 400;
+              }
+
+              strong {
+                font-family: $font-primary;
+                font-size: 1em;
+                font-weight: 200;
+
+              }
+            }
+
+            .telescope-actions {
+              margin-left: 25px;
+            }
+
+            .camera-actions {
+              margin-left: 25px;
+            }
+
+            .camera-details {
+              display: flex;
+              flex-direction: column;
+              justify-content: start;
+              align-items: start;
+
+              span {
+                font-family: $font-secondary;
+                font-size: 1em;
+                font-weight: 400;
+              }
+
+              strong {
+                font-family: $font-primary;
+                font-size: 1em;
+                font-weight: 200;
+
+              }
+
+            }
+
+
+            img {
+              @include account-icon;
+              max-width: 20px;
+            }
+          }
+        }
+      }
+
+      .card-body-empty {
+        margin-top: 20px;
+        font-size: 1.1em;
+      }
+    }
+
+
+    //Modal containeur
+    #modalPlaceholder {
+      .modal {
+        .modal-custom {
+          max-width: 450px;
+        }
+
+        .modal-content {
+          background-color: #1C2733;
+          border-color: $primary;
+          border-radius: 10px;
+          //box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          color: white;
+
+          .modal-header {
+            border-bottom: 1px solid #dee2e6;
+            color: white;
+            background-color: $tertiary;
+
+            .modal-title {
+              @include h2-style;
+              color: #FFFFFF;
+              font-weight: 400;
+              padding: 0;
+              margin: 0;
+            }
+
+            .btn-close {
+              filter: invert(1);
+              opacity: 0.7;
+
+
+              &:hover {
+                opacity: 1;
+              }
+
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+
+          .modal-body {
+            form {
+              padding: 20px;
+              color: #FFFFFF;
+
+              .form-group {
+                margin-top: 15px;
+                margin-bottom: 30px;
+
+                .form-label {
+                  font-family: Poppins, sans-serif;
+                }
+
+                .form-control {
+                  border: 1px solid lightgray;
+                  background-color: #1C2733;
+                  color: #FFFFFF;
+                  border-radius: 10px;
+
+                }
+              }
+
+              .resolution {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                border-radius: 10px;
+
+                .input-group {
+                  width: 50%;
+                  margin: 0;
+                  border-radius: 10px;
+                  padding: 10px;
+
+                  .input-group-prepend {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: transparent;
+                    z-index: 1000;
+                    cursor: pointer;
+                    border-radius: 10px;
+
+                    span {
+                      background-color: transparent;
+                      outline: none;
+                      border: none;
+
+                      i {
+                        color: white;
+                      }
+                    }
+
+                    input {
+                      width: 40%;
+                      border-radius: 10px;
+                    }
+
+                  }
+                }
+              }
+
+              .form-btn {
+                background-color: transparent;
+                color: #ffffff;
+                outline: 1px solid #FFFFFF;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 20px auto;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+

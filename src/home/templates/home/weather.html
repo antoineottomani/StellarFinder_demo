@@ -1,0 +1,154 @@
+{% load static %}
+
+<div class="search-city mb-3">
+	<h2 class="weather-h2">Météo</h2>
+
+	<!-- Form to search city -->
+	<form id="weatherForm" method="post" class="form-inline position-relative">
+		{% csrf_token %}
+		<div class="input-group search-bar">
+			<label for="searchInput" class="search-label"></label>
+			<input id="searchInput" type="text" name="city" class="form-control" placeholder="Choisir une ville" aria-label="search">
+			<div class="input-group-append">
+				<button type="submit" class="search-city-btn btn btn-primary">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</div>
+		</div>
+	</form>
+
+	{% if error_message %}
+	<p class="error-msg text-danger mt-2">{{ error_message }}</p>
+	{% endif %}
+
+</div>
+
+<div id="dynamic-weather" class="container">
+
+
+	{% if current_weather %}
+
+	<div class="current-weather">
+
+
+		<h3 class="weather-h3">Actuellement</h3>
+
+		<div class="card">
+
+			<div class="card-header">
+
+				<div class="city">
+					<img src="{% static 'img/weather_icons/city.png' %}" alt="icone localisation" class="weather-icon">
+					<span>{{ current_weather.city }}</span>
+				</div>
+
+				<div class="gps">{{ current_weather.coordinate }}</div>
+			</div>
+
+
+			<div class="card-body">
+
+				<div class="current-temperature">{{ current_weather.temperature }}</div>
+
+				<div class="current-description">
+					<img src="https://openweathermap.org/img/w/{{ current_weather.icon }}.png" alt="icone météo" class="weather-icon">
+					<span class="description">{{ current_weather.description }}</span>
+				</div>
+
+				<div class="cloud-wind">
+					<div class="clouds">
+						<span>{{ current_weather.clouds }} %</span>
+						<img src="{% static 'img/weather_icons/cloud.png' %}" alt="icone de nuage" class="weather-icon">
+					</div>
+
+					<div class="wind">
+						<span>{{ current_weather.wind }} km/h</span>
+						<img src="{% static 'img/weather_icons/wind_white.png' %}" alt="icone de vent" class="weather-icon">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{% endif %}
+
+
+	{% if daily_weather %}
+
+	<div class="daily-weather">
+		<hr class="mb-4">
+		<h3 class="weather-h3">Prévisions sur 7 jours</h3>
+
+		{% for i in daily_weather %}
+
+		<div class="card">
+
+			<!-- card-header for icon and date -->
+			<div class="card-header">
+				<img src="{% static 'img/weather_icons/calendar.png' %}" alt="icone de calendrier" class="weather-icon">
+				<span>{{ i.date }}</span>
+			</div>
+
+			<div class="card-body">
+
+				<div class="temperature">
+					<div class="card-subtitle min-temperature">{{ i.min_temp }}</div>
+					<div class="card-subtitle max-temperature"> {{ i.max_temp }}</div>
+				</div>
+
+				<div class="daily-description">
+					<div class="dynamic-description">
+						<img src="https://openweathermap.org/img/w/{{ i.icon }}.png" alt="icone météo" class="weather-icon">
+						<span class="description">{{ i.description }}</span>
+					</div>
+
+					<div class="rain">
+						<span>{{ i.rain }}</span>
+						<img src="{% static 'img/weather_icons/rain_white.png' %}" alt="icone de pluie" class="weather-icon">
+					</div>
+				</div>
+
+				<div class="clouds-wind d-flex">
+					<div class="d-flex">
+						<span>{{ i.clouds }}%</span>
+						<img src="{% static 'img/weather_icons/cloud.png' %}" alt="icone de nuage" class="weather-icon">
+					</div>
+
+					<div class="d-flex">
+						<span>{{ i.wind }} km/h</span>
+						<img src="{% static 'img/weather_icons/wind_white.png' %}" alt="icone de vent" class="weather-icon">
+					</div>
+				</div>
+
+				<div class="sun d-flex">
+					<div class="d-flex">
+						<img src="{% static 'img/weather_icons/sunrise.png' %}" alt="icone lever soleil" class="weather-icon">
+						<span>{{ i.sunrise }}</span>
+					</div>
+					<div class="d-flex">
+						<img src="{% static 'img/weather_icons/sunset.png' %}" alt="icone coucher soleil" class="weather-icon">
+						<span>{{ i.sunset }}</span>
+					</div>
+				</div>
+
+				<div class="moon d-flex">
+					<div class="d-flex">
+						<img src="{% static 'img/weather_icons/moonrise.png' %}" alt="icone lever lune" class="weather-icon">
+						<span>{{ i.moonrise }}</span>
+					</div>
+					<div class="d-flex">
+						<img src="{% static 'img/weather_icons/moonset.png' %}" alt="icone coucher lune" class="weather-icon">
+						<span>{{ i.moonset }}</span>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+
+
+</div>

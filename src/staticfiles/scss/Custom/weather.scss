@@ -1,0 +1,341 @@
+// Weather-block is a container in index.html
+.weather-block {
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 330px;
+  width: 330px;
+  margin-left: 15px;
+
+
+  img {
+    width: 25px;
+  }
+
+  // The rest of the code is about weather.html
+  .search-city {
+    background-color: #17202A;
+    height: auto;
+    font-family: "PoppinsLight", sans-serif;
+    border-radius: 10px;
+    padding: 10px;
+
+    h2 {
+      @include h2-style;
+    }
+
+    .search-bar {
+      position: relative;
+      margin-bottom: 20px;
+      border-radius: 15px;
+
+      #searchInput {
+        width: 100%;
+        padding-right: 40px;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 10px;
+        outline: none;
+        color: #ffffff;
+        font-size: 1em;
+
+        &::placeholder {
+          color: white;
+        }
+
+      }
+
+      .input-group-append {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        z-index: 1000;
+        cursor: pointer;
+
+        .search-label {
+          display: none;
+        }
+
+        .search-city-btn {
+          border: none;
+          background: transparent;
+          color: #ffffff;
+          cursor: pointer;
+          padding: 0;
+
+          i {
+            font-size: 1.2em;
+            cursor: pointer;
+          }
+
+          &:hover {
+            color: $tertiary
+          }
+        }
+      }
+    }
+
+    .error-msg {
+      color: red;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1em;
+    }
+  }
+
+
+  // Manage current and daily weather
+  #dynamic-weather {
+    max-height: 450px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $primary $secondary;
+    background-color: $secondary;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: none;
+
+
+    .current-weather {
+      color: #ffffff;
+      width: 100%;
+      //border: 1px solid red;
+      font-family: "PoppinsLight", sans-serif;
+      margin-top: 15px;
+
+
+      .weather-h3 {
+        @include h3-style;
+      }
+
+      .card {
+        border-radius: 8px;
+        margin-top: 15px;
+        background-color: $primary;
+        color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .card-header {
+          background-color: black;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+
+          .city {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1em;
+
+            img {
+              margin-right: 5px;
+              width: 1.3em;
+            }
+          }
+
+          .gps {
+            font-style: italic;
+            font-size: 12px;
+            padding: 5px;
+          }
+        }
+
+        .card-body {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 10px;
+          font-size: 1em;
+
+          .current-temperature {
+            margin-top: 10px;
+
+
+          }
+
+          .current-description {
+            margin-top: 15px;
+
+            .weather-icon {
+              width: 40px;
+            }
+          }
+
+          .cloud-wind {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            margin-top: 15px;
+
+            .wind {
+              font-size: 0.9em;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .weather-icon {
+                width: 30px;
+                margin-left: 10px;
+              }
+            }
+
+            .clouds {
+              font-size: 0.9em;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .weather-icon {
+                width: 30px;
+                margin-left: 5px;
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+
+    .daily-weather {
+      //border: 1px solid red;
+      color: #ffffff;
+      width: 100%;
+      font-family: "PoppinsLight", sans-serif;
+      margin-top: 15px;
+      font-size: 1em;
+
+
+      .weather-h3 {
+        @include h3-style;
+      }
+
+      .card {
+        border-radius: 8px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        background-color: $primary;
+        color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .card-header {
+          background-color: black;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          img {
+            margin-right: 15px;
+
+          }
+        }
+
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+
+          .temperature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
+
+            .min-temperature {
+              color: #0861aa;
+            }
+
+            .max-temperature {
+              color: #f1ab02;
+            }
+          }
+
+          .daily-description {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+
+            .dynamic-description {
+              .description {
+                margin-left: 10px;
+              }
+
+              .weather-icon {
+                width: 40px;
+              }
+            }
+
+            .rain span {
+              margin-right: 5px;
+
+            }
+          }
+
+          .clouds-wind {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+
+            .weather-icon {
+              margin-left: 10px;
+            }
+          }
+
+          .sun {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 30px;
+
+            .weather-icon {
+              margin-right: 10px;
+            }
+          }
+
+          .moon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+
+            .weather-icon {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}

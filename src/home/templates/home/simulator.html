@@ -1,0 +1,69 @@
+{% load static %}
+
+<div class="simulator container">
+
+	<!-- Search bar and equipment selection -->
+	<div class="search-and-equipment-container row mb-4">
+		<div class="col-12 col-md-6">
+
+			<!-- Search star into aladin database -->
+			<div class="search-container" id="search-container">
+				<div class="input-group search-bar">
+					<input type="text" id="search-input" class="form-control" placeholder="Entrez le nom d'un astre">
+					<div class="input-group-append">
+						<button class="search-target-btn btn btn-secondary" type="button">
+							<i class="fa fa-search"></i>
+						</button>
+					</div>
+				</div>
+				<div id="errorMessage" class="error-message text-danger mt-2"></div>
+			</div>
+
+		</div>
+
+		<div class="col-12 col-md-6">
+
+			<!-- Choose which equipment to use -->
+			<div class="inputs-container">
+
+				{% if user.is_authenticated or demo_mode %}
+				<div class="text">Choix du matériel :
+					<div id="Equipment" data-url-equipment="{% url 'equipement' %}">
+						<div class="dropdown mb-2">
+							<select id="telescopes" class="form-control"></select>
+						</div>
+
+						<div class="dropdown">
+							<select id="cameras" class="form-control"></select>
+						</div>
+					</div>
+				</div>
+
+				{% else %}
+				<div class="cta">
+					<p>Vous devez être connecté pour choisir votre équipement</p>
+					<div class="cta-btn">
+						<a class="btn btn-primary" href="{% url 'connexion' %}">Se connecter</a>
+						<a class="btn btn-secondary" href="{% url 'inscription' %}">S'inscrire</a>
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+
+	</div>
+
+	<input type="hidden" id="fov-width">
+	<input type="hidden" id="fov-height">
+	<input type="hidden" id="ra">
+	<input type="hidden" id="dec">
+	<input type="hidden" id="stellar-name">
+	<input type="hidden" id="catalog-name">
+	<input type="hidden" id="constellation">
+	<input type="hidden" id="meridien">
+
+	<div id="aladin-container" class="container">
+		<div id="aladin-lite-div"></div>
+		<div id="errorMessage" class="alert alert-danger"></div>
+	</div>
+</div>

@@ -1,0 +1,236 @@
+// ZONE SIMULATEUR TÉLESCOPE
+
+.simulator-block {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+
+  .simulator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border-radius: 10px;
+
+    .search-and-equipment-container {
+      background-color: $secondary;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 10px;
+
+
+      .search-container {
+
+
+        .search-bar {
+          position: relative;
+          border-radius: 15px;
+
+          #search-input {
+            width: 100%;
+            padding-right: 40px;
+            background: transparent;
+            border: 1px solid $tertiary;
+            border-radius: 10px;
+            outline: none;
+            color: #ffffff;
+            font-size: 1em;
+
+            &::placeholder {
+              color: white;
+            }
+          }
+
+          .input-group-append {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            z-index: 1000;
+            cursor: pointer;
+
+            .search-target-btn {
+              border: none;
+              background: transparent;
+              color: #ffffff;
+              cursor: pointer;
+              padding: 0;
+
+              i {
+                font-size: 1.2em;
+                cursor: pointer;
+              }
+
+              &:hover {
+                color: $tertiary
+              }
+            }
+          }
+        }
+
+        #errorMessage {
+          display: none;
+          color: red;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+
+
+      .inputs-container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        margin-top: 0;
+
+
+        .text {
+          text-align: center;
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+        }
+
+        #userEquipment {
+          padding: 0;
+          margin-top: 20px;
+          display: flex;
+          flex-direction: row;
+
+
+          .dropdown {
+            padding: 0;
+            margin: 10px;
+            width: 100%;
+
+            select {
+              min-width: 150px; // Définir une largeur minimale pour les sélecteurs
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+              background-color: #fff;
+              color: #333;
+              font-size: 1em;
+
+
+              option {
+                padding: 10px;
+                font-size: 1em;
+                text-align: center;
+              }
+            }
+          }
+        }
+
+
+        #save-framing-btn {
+          display: block;
+          width: 100%;
+          max-width: 300px;
+          margin: 20px auto;
+          padding: 10px;
+          border-radius: 10px;
+          background-color: $primary;
+          color: white;
+          border: 1px solid $tertiary;
+
+          &:hover {
+            background-color: darken($primary, 10%);
+          }
+        }
+      }
+
+      .cta {
+        margin-left: 40px;
+
+
+        p {
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        .cta-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+
+
+          a {
+            @include h3-style;
+            color: #ffffff;
+            padding: 5px;
+            width: 120px;
+            text-decoration: none;
+            border: 1px solid $tertiary;
+            margin: 5px;
+
+          }
+        }
+
+      }
+
+      .error-message {
+        display: none;
+        color: red;
+        margin-top: 10px;
+      }
+    }
+
+
+    #aladin-container {
+      width: 100%;
+      max-width: 1200px; // Réduit la largeur maximale pour une meilleure visibilité
+      height: 600px; // Réduit la hauteur pour une meilleure gestion de l'espace
+      border-radius: 10px;
+
+
+      #aladin-lite-div {
+        width: 100%;
+        height: 100%; // Réduit la hauteur pour correspondre à la hauteur du conteneur
+        border-radius: 10px;
+
+        .aladin-logo-container {
+          a .aladin-logo {
+            width: 60px;
+            max-width: 60px;
+            height: auto;
+            opacity: 0.6;
+          }
+        }
+      }
+
+      #errorMessage {
+        display: none;
+      }
+
+      //.info-box {
+      //  margin-top: 20px;
+      //  background-color: #f9f9f9;
+      //  padding: 10px;
+      //  border-radius: 5px;
+      //  border: 1px solid #ddd;
+      //
+      //  p {
+      //    margin: 5px 0;
+      //  }
+      //}
+
+      //#errorMessage {
+      //  margin-top: 10px;
+      //}
+    }
+  }
+}
