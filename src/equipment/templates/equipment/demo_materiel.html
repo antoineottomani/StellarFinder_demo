@@ -1,0 +1,78 @@
+{% load static %}
+
+{% block content %}
+<div class="user-equipment">
+
+    <!-- Display equipment list -->
+    <div class="equipment-list">
+
+        <!-- Télescopes -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Télescopes (3)</h2>
+                <button type="button" class="btn btn-primary btn-sm" disabled>
+                    <img src="{% static 'img/equipment/add-telescope.png' %}" alt="Bouton pour ajouter un télescope" class="img-fluid">
+                </button>
+            </div>
+            <div class="card-body">
+                <ul id="telescopeList" class="list-group list-group-flush">
+                    {% for telescope in telescopes %}
+                    <li class="list-group-item">
+                        <div class="telescope-details">
+                            <strong>{{ telescope.model_name }}</strong>
+                            <span>{{ telescope.aperture|floatformat:0 }}/{{telescope.focal_length|floatformat:0}}
+                                mm</span>
+                        </div>
+
+                        <!-- Container for edit & delete buttons -->
+                        <span class="telescope-actions d-flex flex-shrink-0">
+                            <button type="button" class="btn btn-primary btn-sm" disabled>
+                                <img src="{% static 'img/equipment/edit.svg' %}" alt="Bouton pour modifier un télescope" class="img-fluid">
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm" disabled>
+                                <img src="{% static 'img/equipment/delete.svg' %}" alt="Bouton pour supprimer un télescope" class="img-fluid">
+                            </button>
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Caméras -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Caméras (4)</h2>
+                <button type="button" class="btn btn-primary btn-sm" disabled>
+                    <img src="{% static 'img/equipment/add-camera.png' %}" alt="Bouton pour ajouter une caméra" class="img-fluid">
+                </button>
+            </div>
+            <div class="card-body">
+                <ul id="cameraList" class="list-group list-group-flush">
+
+                    {% for camera in cameras %}
+                    <li class="list-group-item">
+                        <div class="camera-details">
+                            <strong>{{ camera.model_name }}</strong>
+                            <span>{{ camera.resolution_width }}x{{ camera.resolution_height }}px</span>
+                        </div>
+
+                        <!-- Container for edit & delete buttons -->
+                        <span class="camera-actions d-flex flex-shrink-0">
+                            <button type="button" class="btn btn-primary btn-sm" disabled>
+                                <img src="{% static 'img/equipment/edit.svg' %}" alt="Bouton pour modifier une caméra" class="img-fluid">
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm" disabled>
+                                <img src="{% static 'img/equipment/delete.svg' %}" alt="Bouton pour supprimer une caméra" class="img-fluid">
+                            </button>
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
