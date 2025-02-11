@@ -1,8 +1,8 @@
 {
     "telescopes": [
-        {"id": 1, "model_name": "SkyWatcher", "aperture": 150, "focal_length": 750},
-        {"id": 2, "model_name": "SkyWatcher", "aperture": 300, "focal_length": 1500},
-        {"id": 3, "model_name": "SkyWatcher 80ED", "aperture": 80, "focal_length": 400}
+        {"id": 1, "model_name": "SW", "aperture": 150, "focal_length": 750},
+        {"id": 2, "model_name": "SW", "aperture": 300, "focal_length": 1500},
+        {"id": 3, "model_name": "SW 80ED", "aperture": 80, "focal_length": 400}
     ],
     "cameras": [
         {"id": 1, "model_name": "Canon EOS 700D", "sensor_type": "CMOS", "resolution_width": 5184, "resolution_height": 3456, "pixel_size": 4.3},

@@ -262,7 +262,7 @@ function updateSelectOptions(selectId, items) {
   items.forEach((item) => {
     const option = document.createElement("option");
     option.value = item.id;
-    option.textContent = item.model_name;
+    option.textContent = `${item.model_name} (${item.aperture}/${item.focal_length})`;
     select.appendChild(option);
   });
 }
@@ -281,68 +281,4 @@ function getCookie(name) {
     }
   }
   return cookieValue;
-}
-
-// Événement du bouton pour sauvegarder le cadrage si l'utilisateur est satisfait
-document.querySelector("#save-framing-btn").addEventListener("click", () => {
-  const telescopeId = document.querySelector("#telescopes").value;
-  const cameraId = document.querySelector("#cameras").value;
-  const fovWidth = parseFloat(document.querySelector("#fov-width").value);
-  const fovHeight = parseFloat(document.querySelector("#fov-height").value);
-
-  const stellarObject = {
-    name: document.querySelector("#stellar-name").value,
-    catalog_name: document.querySelector("#catalog-name").value,
-    right_ascension: parseFloat(document.querySelector("#ra").value),
-    declination: parseFloat(document.querySelector("#dec").value),
-    constellation: document.querySelector("#constellation").value,
-    meridien: document.querySelector("#meridien").value,
-  };
-
-  saveFraming(telescopeId, cameraId, fovWidth, fovHeight, stellarObject);
-});
-
-// Fonction pour sauvegarder le cadrage
-function saveFraming(
-  telescopeId,
-  cameraId,
-  fovWidth,
-  fovHeight,
-  stellarObject
-) {
-  const url = "/enregistrer-cadrage/";
-  const csrftoken = getCookie("csrftoken");
-
-  const data = {
-    name: stellarObject.name,
-    catalog_name: stellarObject.catalog_name,
-    right_ascension: stellarObject.right_ascension,
-    declination: stellarObject.declination,
-    constellation: stellarObject.constellation,
-    meridien: stellarObject.meridien,
-    telescope: telescopeId,
-    camera: cameraId,
-    fov_width: fovWidth,
-    fov_height: fovHeight,
-  };
-
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-CSRFToken": csrftoken,
-    },
-    credentials: "include",
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.status !== "success") {
-        displayError(data.message || "Erreur lors de l'enregistrement.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error saving framing and stellar object:", error);
-      displayError("Erreur lors de l'enregistrement.");
-    });
 }

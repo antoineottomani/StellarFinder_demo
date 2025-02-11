@@ -635,6 +635,7 @@ li {
   justify-content: center;
   color: #FFFFFF;
   border-radius: 10px;
+  border: 1px solid red;
 }
 .simulator-block .simulator .search-and-equipment-container {
   background-color: #17202A;
