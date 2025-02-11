@@ -1,0 +1,13 @@
+asgiref==3.7.2
+certifi==2024.2.2
+charset-normalizer==3.3.2
+crispy-bootstrap5==2024.2
+Django==5.0.4
+django-crispy-forms==2.1
+idna==3.6
+mysqlclient==2.2.4
+python-environ==0.4.54
+requests==2.31.0
+sqlparse==0.4.4
+tornado==6.4
+urllib3==2.2.1

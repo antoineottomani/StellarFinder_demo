@@ -1,25 +1,22 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
-import os
 import sys
 import environ
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent
+import os
 
 
 def main():
     """Run administrative tasks."""
 
-    # Load env variables
-    env = environ.Env()
-    environ.Env.read_env(env_file=str(
-        BASE_DIR / "stellarfinder/.env"))
+    environment = os.getenv('DJANGO_ENV', default='development')
 
-    # Set DJANGO_SETTINGS_MODULE based on the DJANGO_ENV environment variable
-    env_setting = env('DJANGO_ENV', default='development')
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                          f'stellarfinder.settings.{env_setting}')
+    # Load the correct settings file
+    if environment == 'production':
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                              'stellarfinder.settings.demo_production')
+    else:
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                              'stellarfinder.settings.demo_development')
 
     try:
         from django.core.management import execute_from_command_line

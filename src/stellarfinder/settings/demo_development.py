@@ -1,9 +1,15 @@
 from .settings import *
 
+environ.Env.read_env(env_file=str(BASE_DIR / "stellarfinder/.env"))
+
 INSTALLED_APPS += [
     'livereload',
     'debug_toolbar',
 ]
+
+DEBUG = True
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 MIDDLEWARE += [
     'livereload.middleware.LiveReloadScript',

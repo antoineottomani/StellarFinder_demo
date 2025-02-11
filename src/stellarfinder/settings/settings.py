@@ -1,16 +1,18 @@
 from pathlib import Path
 import environ
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Global settings for production & development environments in demo version
+
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
+print(BASE_DIR)
 
 env = environ.Env()
-environ.Env.read_env(env_file=str(
-    BASE_DIR / "stellarfinder/.env"))
 
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 DEBUG = env('DEBUG', default=False)
 ALLOWED_HOSTS = []
+
+DEMO_DATA_PATH = BASE_DIR / "equipment/demo_data.json"
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -47,6 +49,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'home.context_processors.demo_mode',
+
             ],
         },
     },
@@ -84,14 +87,3 @@ AUTH_USER_MODEL = 'users.CustomUser'
 # URL to redirect after connexion success
 LOGIN_REDIRECT_URL = 'mon-compte'
 LOGIN_URL = 'connexion'
-
-
-ENVIRONMENT = env('DJANGO_ENV', default='development')
-
-if ENVIRONMENT == 'demo':
-    from .demo import *
-elif ENVIRONMENT == 'development':
-    from .development import *
-else:
-    raise ValueError(
-        "Invalid ENVIRONMENT value. Expected 'demo' or 'development'.")

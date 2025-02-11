@@ -163,108 +163,6 @@ function drawFovRectangle(fovWidth, fovHeight, targetName) {
   });
 }
 
-// Fonction de recherche d'un astre
-// function searchTarget(event) {
-//     event.preventDefault();
-//
-//     let targetName = document.getElementById('search-input').value.trim();
-//     const isUserAuthenticated = document.getElementById('userEquipment') !== null;
-//
-//     if (isUserAuthenticated) {
-//         let telescopeId = document.getElementById('telescopes').value;
-//         let cameraId = document.getElementById('cameras').value;
-//
-//         if (!targetName || !telescopeId || !cameraId) {
-//             displayError('Veuillez remplir tous les champs requis.');
-//             return;
-//         }
-//
-//         clearError();
-//         aladin.gotoObject(targetName, {
-//             success: (raDec) => {
-//                 if (raDec) {
-//                     console.log(`Astre ${targetName} trouvé avec succès.`);
-//                     // Changer de survey pour un affichage détaillé
-//                     aladin.setImageSurvey('P/DSS2/color');
-//                     aladin.getOverlay('fovOverlay')?.removeAll(); // Supprimer les anciens polygones
-//                     fetchFov(telescopeId, cameraId, targetName);
-//                 } else {
-//                     displayError(`La recherche pour l'astre ${targetName} n'a rien donné`);
-//                 }
-//             },
-//             error: (err) => {
-//                 console.error(`Erreur lors de la recherche pour l'astre ${targetName}:`, err);
-//                 displayError(`La recherche pour l'astre ${targetName} n'a rien donné`);
-//             }
-//         });
-//     } else {
-//         if (!targetName) {
-//             displayError('Veuillez entrer un nom d\'astre.');
-//             return;
-//         }
-//
-//         clearError();
-//         aladin.gotoObject(targetName, {
-//             success: (raDec) => {
-//                 if (raDec) {
-//                     console.log(`Astre ${targetName} trouvé avec succès.`);
-//                     // Changer de survey pour un affichage détaillé
-//                     aladin.setImageSurvey('P/DSS2/color');
-//                 } else {
-//                     displayError(`La recherche pour l'astre ${targetName} n'a rien donné`);
-//                 }
-//             },
-//             error: (err) => {
-//                 console.error(`Erreur lors de la recherche pour l'astre ${targetName}:`, err);
-//                 displayError(`La recherche pour l'astre ${targetName} n'a rien donné`);
-//             }
-//         });
-//     }
-// }
-//
-//
-// // Fonction pour dessiner un rectangle représentant le FOV
-// function drawFovRectangle(fovWidth, fovHeight, targetName) {
-//     let fovOverlay = aladin.getOverlay('fovOverlay');
-//     if (!fovOverlay) {
-//         fovOverlay = A.graphicOverlay({name: 'fovOverlay', color: 'red', lineWidth: 2});
-//         aladin.addOverlay(fovOverlay);
-//     } else {
-//         fovOverlay.removeAll();
-//     }
-//
-//     aladin.gotoObject(targetName, {
-//         success: (raDec) => {
-//             if (raDec) {
-//                 const ra = raDec[0];
-//                 const dec = raDec[1];
-//
-//                 const rectangle = A.polyline([
-//                     [ra - fovWidth / 2, dec - fovHeight / 2],
-//                     [ra + fovWidth / 2, dec - fovHeight / 2],
-//                     [ra + fovWidth / 2, dec + fovHeight / 2],
-//                     [ra - fovWidth / 2, dec + fovHeight / 2],
-//                     [ra - fovWidth / 2, dec - fovHeight / 2]
-//                 ], {color: 'green', lineWidth: 1});
-//
-//                 fovOverlay.addFootprints([rectangle]);
-//
-//                 const fovRadius = Math.max(fovWidth, fovHeight);
-//                 aladin.setFoV(fovRadius * 1.5);
-//                 aladin.gotoRaDec(ra, dec);
-//
-//                 document.getElementById('fov-width').value = fovWidth;
-//                 document.getElementById('fov-height').value = fovHeight;
-//             } else {
-//                 displayError(`Erreur lors de la mise à jour du champ de vision pour ${targetName}.`);
-//             }
-//         },
-//         error: (err) => {
-//             displayError(`Erreur lors de la mise à jour du champ de vision pour ${targetName}.`);
-//         }
-//     });
-// }
-
 // Fonction pour récupérer le champ de vision (FOV)
 function fetchFov(telescopeId, cameraId, targetName) {
   const url = `/calcul-fov/${telescopeId}/${cameraId}/`;
@@ -324,7 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function loadEquipment(equipmentDiv) {
-  const equipmentUrl = equipmentDiv.getAttribute("data-url-equipment");
   try {
     const equipmentUrl = equipmentDiv.getAttribute("data-url-equipment");
     const data = await fetchData(equipmentUrl);

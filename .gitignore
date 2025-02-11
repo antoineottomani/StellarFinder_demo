@@ -1,0 +1,31 @@
+# Automatically generated folders and files
+__pycache__/
+.pyc
+.DS_Store
+Thumbs.db
+
+# Development environment specific files
+*.env
+*.pyc
+.python-version
+**/migrations/
+
+# Virtual environment specific files
+venv/
+env/
+.env/
+
+# Code editor specific files
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Bootstrap files
+src/staticfiles/scss/Bootstrap/
