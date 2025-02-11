@@ -1,4 +1,4 @@
-from .settings import *
+from stellarfinder.settings.settings import *
 
 environ.Env.read_env(env_file=str(BASE_DIR / "stellarfinder/.env"))
 

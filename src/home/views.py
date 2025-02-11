@@ -1,9 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
-from equipment.models import Telescope, Camera
 from django.http import JsonResponse, HttpResponse
-from django.utils.decorators import method_decorator
-from django.contrib.auth.decorators import login_required
 from django.views import View
 import environ
 import datetime
@@ -20,13 +17,11 @@ def load_demo_data():
 
 
 def homepage_view(request):
-    context = {}
 
     # Get weather data to render them home page
     # context = display_weather(request, context)
 
-    return render(request, "home/index.html", context)
-    # return render(request, "home/index.html")
+    return render(request, "home/index.html")
 
 
 def display_weather(request, context):
@@ -112,13 +107,11 @@ def proxy_to_aladin(request):
     target_url = request.GET.get(
         'url', 'https://aladin.u-strasbg.fr/AladinLite/api')
 
-    # Envoyer la requête à l'API externe
     response = requests.get(target_url)
 
-    # Créer une réponse HTTP avec les bons en-têtes CORS
     http_response = HttpResponse(
         response.content, content_type=response.headers['Content-Type'])
-    # À utiliser avec prudence; idéalement, spécifiez votre domaine
+
     http_response['Access-Control-Allow-Origin'] = '*'
     http_response['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
     http_response['Access-Control-Allow-Headers'] = 'Content-Type'
@@ -126,22 +119,9 @@ def proxy_to_aladin(request):
 
 
 class FetchEquipment(View):
-    # @method_decorator(login_required)
     def get(self, request, *args, **kwargs):
-
-        # Check if demo mode is activated
-        if settings.DEMO_MODE:
-            demo_data = load_demo_data()
-            telescopes = demo_data.get("telescopes", [])
-            cameras = demo_data.get("cameras", [])
-        else:
-            if not request.user.is_authenticated:
-                return JsonResponse({'error': 'Vous devez être connecté pour choisir votre matériel.'}, status=403)
-
-            # Get user's equipment from database
-            telescopes = list(Telescope.objects.filter(user=request.user).values(
-                'id', 'model_name', 'aperture', 'focal_length'))
-            cameras = list(Camera.objects.filter(user=request.user).values(
-                'id', 'model_name', 'resolution_width', 'resolution_height', 'pixel_size'))
+        demo_data = load_demo_data()
+        telescopes = demo_data.get("telescopes", [])
+        cameras = demo_data.get("cameras", [])
 
         return JsonResponse({'telescopes': telescopes, 'cameras': cameras})

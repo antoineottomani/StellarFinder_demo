@@ -4,9 +4,11 @@ import environ
 # Global settings for production & development environments in demo version
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-print(BASE_DIR)
+
 
 env = environ.Env()
+environ.Env.read_env(env_file=str(BASE_DIR / "stellarfinder/.env"))
+
 
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 DEBUG = env('DEBUG', default=False)
