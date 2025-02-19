@@ -1,0 +1,27 @@
+@mixin h1-style {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: $font-primary;
+    font-weight: 400;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+@mixin h2-style {
+    font-size: 1.2em;
+    text-align: center;
+    color: #ffffff;
+    font-family: $font-secondary;
+}
+
+@mixin h3-style {
+    font-size: 1em;
+    font-family: $font-secondary;
+    text-align: center;
+    color: #ffffff;
+}
+
+@mixin equipment-icon {
+    width: 20px;
+
+}

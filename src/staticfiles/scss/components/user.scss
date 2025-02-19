@@ -53,9 +53,9 @@
             border: 1px solid green;
             padding: 0;
             margin: 10px;
-            
+
           }
-          
+
 
         }
       }
@@ -167,10 +167,10 @@ li {
     display: flex;
 
     .btn[disabled] {
-    cursor: not-allowed;
-    background-color: #ccc;
-    border-color: #bbb;
-}
+      cursor: not-allowed;
+      background-color: #ccc;
+      border-color: #bbb;
+    }
 
 
     .equipment-list {
@@ -179,7 +179,8 @@ li {
       flex-wrap: wrap;
       font-size: 1em;
 
-      .card, .no-equipment {
+      .card,
+      .no-equipment {
         background-color: $primary;
         margin: 30px;
         padding: 0;
@@ -271,7 +272,7 @@ li {
 
 
             img {
-              @include account-icon;
+              @include equipment-icon;
               max-width: 20px;
             }
           }
@@ -410,4 +411,3 @@ li {
     }
   }
 }
-
