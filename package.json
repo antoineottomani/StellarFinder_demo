@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }, 
+  "scripts": {
+    "scss": "sass src/staticfiles/scss/style.scss src/staticfiles/css/style.css --watch"
+  }
+}
