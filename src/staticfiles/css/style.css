@@ -1,878 +1,5 @@
 @charset "UTF-8";
-.signup-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.signup-section .signup-content {
-  margin: 60px auto;
-  background-color: #17202A;
-  border-radius: 10px;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.signup-section .signup-content h1, .signup-section .signup-content .h1 {
-  text-align: center;
-  font-size: 1.5em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin-top: 20px;
-  color: #ffffff;
-}
-.signup-section .signup-content .signup-form {
-  margin: 0 auto;
-  padding: 15px;
-}
-.signup-section .signup-content .signup-form .form-group {
-  margin: 20px auto;
-}
-.signup-section .signup-content .signup-form .form-group .input-group {
-  width: 100%;
-}
-.signup-section .signup-content .signup-form .form-group .input-group .input-group-text {
-  border: 1px solid #ced4da;
-  border-right: 0;
-  color: #6c757d;
-}
-.signup-section .signup-content .signup-form .form-group .input-group .form-control {
-  width: calc(100% - 40px);
-  border-left: 0;
-}
-.signup-section .signup-content .signup-form .form-group .form-text {
-  color: white;
-  font-size: 0.85em;
-  opacity: 0.8;
-}
-.signup-section .signup-content .signup-form .form-group .text-danger ul {
-  border: 1px solid green;
-  padding: 0;
-  margin: 10px;
-}
-.signup-section .signup-content .signup-form #form-btn {
-  display: block;
-  margin: 0 auto;
-}
-
-li {
-  list-style-type: none;
-}
-
-.login-section {
-  font-family: "Poppins", sans-serif;
-}
-.login-section .login-content {
-  background-color: #17202A;
-  border-radius: 10px;
-  margin-top: 0;
-}
-.login-section .login-content h1, .login-section .login-content .h1 {
-  text-align: center;
-  font-size: 1.5em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin-top: 20px;
-  color: #ffffff;
-}
-.login-section .login-content .login-form {
-  margin: 60px auto;
-  width: 100%;
-  padding: 15px;
-}
-.login-section .login-content .login-form .general-errors {
-  font-size: 0.9em;
-}
-.login-section .login-content .login-form #form-error {
-  font-size: 1.1em;
-  color: #ff3030;
-  text-align: left;
-  font-family: "Open Sans", sans-serif;
-}
-.login-section .login-content .login-form #form-btn {
-  display: flex;
-  margin: 30px auto 0 auto;
-  font-size: 1em;
-  border: 1px solid white;
-}
-
-.account-section {
-  background-color: #17202A;
-  border-radius: 10px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Open Sans", sans-serif;
-  padding: 0;
-  width: 100%;
-}
-.account-section .profile-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-}
-.account-section .profile-header img {
-  width: 50px;
-  margin-right: 40px;
-}
-.account-section .profile-header h1, .account-section .profile-header .h1 {
-  text-align: center;
-  font-size: 1.5em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin-top: 20px;
-  color: #ffffff;
-}
-.account-section .goto-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
-  color: #FFFFFF;
-  margin-top: 30px;
-}
-.account-section .goto-button img {
-  width: 50px;
-  margin-right: 5px;
-}
-.account-section .user-equipment {
-  margin-top: 50px;
-  display: flex;
-}
-.account-section .user-equipment .btn[disabled] {
-  cursor: not-allowed;
-  background-color: #ccc;
-  border-color: #bbb;
-}
-.account-section .user-equipment .equipment-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-size: 1em;
-}
-.account-section .user-equipment .equipment-list .card, .account-section .user-equipment .equipment-list .no-equipment {
-  background-color: #0C1218;
-  margin: 30px;
-  padding: 0;
-}
-.account-section .user-equipment .equipment-list .card .card-header, .account-section .user-equipment .equipment-list .no-equipment .card-header {
-  background-color: #FB7D00;
-  border-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-.account-section .user-equipment .equipment-list .card .card-header h2, .account-section .user-equipment .equipment-list .card .card-header .h2, .account-section .user-equipment .equipment-list .no-equipment .card-header h2, .account-section .user-equipment .equipment-list .no-equipment .card-header .h2 {
-  font-size: 1.2em;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-}
-.account-section .user-equipment .equipment-list .card .card-header button img, .account-section .user-equipment .equipment-list .no-equipment .card-header button img {
-  width: 25px;
-}
-.account-section .user-equipment .equipment-list .card .list-group, .account-section .user-equipment .equipment-list .no-equipment .list-group {
-  padding: 10px;
-  background-color: #0C1218;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item {
-  color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0C1218;
-  margin-top: 10px;
-  padding-bottom: 20px;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details span, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details span {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details strong, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details strong {
-  font-family: "Poppins", sans-serif;
-  font-size: 1em;
-  font-weight: 200;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-actions, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-actions {
-  margin-left: 25px;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-actions, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-actions {
-  margin-left: 25px;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details span, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details span {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details strong, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details strong {
-  font-family: "Poppins", sans-serif;
-  font-size: 1em;
-  font-weight: 200;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item img, .account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item img {
-  width: 20px;
-  max-width: 20px;
-}
-.account-section .user-equipment .equipment-list .card-body-empty {
-  margin-top: 20px;
-  font-size: 1.1em;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-custom {
-  max-width: 450px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content {
-  background-color: #1C2733;
-  border-color: #0C1218;
-  border-radius: 10px;
-  color: white;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header {
-  border-bottom: 1px solid #dee2e6;
-  color: white;
-  background-color: #FB7D00;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .modal-title {
-  font-size: 1.2em;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  color: #FFFFFF;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close {
-  filter: invert(1);
-  opacity: 0.7;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close:hover {
-  opacity: 1;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close:focus {
-  box-shadow: none;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form {
-  padding: 20px;
-  color: #FFFFFF;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group .form-label {
-  font-family: Poppins, sans-serif;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group .form-control {
-  border: 1px solid lightgray;
-  background-color: #1C2733;
-  color: #FFFFFF;
-  border-radius: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  border-radius: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group {
-  width: 50%;
-  margin: 0;
-  border-radius: 10px;
-  padding: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  z-index: 1000;
-  cursor: pointer;
-  border-radius: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend span {
-  background-color: transparent;
-  outline: none;
-  border: none;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend span i {
-  color: white;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend input {
-  width: 40%;
-  border-radius: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-btn {
-  background-color: transparent;
-  color: #ffffff;
-  outline: 1px solid #FFFFFF;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 20px auto;
-}
-
-.weather-block {
-  padding: 15px;
-  border-radius: 10px;
-  max-width: 330px;
-  width: 330px;
-  margin-left: 15px;
-}
-.weather-block img {
-  width: 25px;
-}
-.weather-block .search-city {
-  background-color: #17202A;
-  height: auto;
-  font-family: "PoppinsLight", sans-serif;
-  border-radius: 10px;
-  padding: 10px;
-}
-.weather-block .search-city h2, .weather-block .search-city .h2 {
-  font-size: 1.2em;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-}
-.weather-block .search-city .search-bar {
-  position: relative;
-  margin-bottom: 20px;
-  border-radius: 15px;
-}
-.weather-block .search-city .search-bar #searchInput {
-  width: 100%;
-  padding-right: 40px;
-  background: transparent;
-  border: 2px solid white;
-  border-radius: 10px;
-  outline: none;
-  color: #ffffff;
-  font-size: 1em;
-}
-.weather-block .search-city .search-bar #searchInput::placeholder {
-  color: white;
-}
-.weather-block .search-city .search-bar .input-group-append {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  z-index: 1000;
-  cursor: pointer;
-}
-.weather-block .search-city .search-bar .input-group-append .search-label {
-  display: none;
-}
-.weather-block .search-city .search-bar .input-group-append .search-city-btn {
-  border: none;
-  background: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 0;
-}
-.weather-block .search-city .search-bar .input-group-append .search-city-btn i {
-  font-size: 1.2em;
-  cursor: pointer;
-}
-.weather-block .search-city .search-bar .input-group-append .search-city-btn:hover {
-  color: #FB7D00;
-}
-.weather-block .search-city .error-msg {
-  color: red;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1em;
-}
-.weather-block #dynamic-weather {
-  max-height: 450px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #0C1218 #17202A;
-  background-color: #17202A;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 30px;
-  display: none;
-}
-.weather-block #dynamic-weather .current-weather {
-  color: #ffffff;
-  width: 100%;
-  font-family: "PoppinsLight", sans-serif;
-  margin-top: 15px;
-}
-.weather-block #dynamic-weather .current-weather .weather-h3 {
-  font-size: 1em;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-  color: #ffffff;
-}
-.weather-block #dynamic-weather .current-weather .card {
-  border-radius: 8px;
-  margin-top: 15px;
-  background-color: #0C1218;
-  color: white;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.weather-block #dynamic-weather .current-weather .card .card-header {
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.weather-block #dynamic-weather .current-weather .card .card-header .city {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 1em;
-}
-.weather-block #dynamic-weather .current-weather .card .card-header .city img {
-  margin-right: 5px;
-  width: 1.3em;
-}
-.weather-block #dynamic-weather .current-weather .card .card-header .gps {
-  font-style: italic;
-  font-size: 12px;
-  padding: 5px;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
-  font-size: 1em;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body .current-temperature {
-  margin-top: 10px;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body .current-description {
-  margin-top: 15px;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body .current-description .weather-icon {
-  width: 40px;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-  align-items: center;
-  margin-top: 15px;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind .wind {
-  font-size: 0.9em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind .wind .weather-icon {
-  width: 30px;
-  margin-left: 10px;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind .clouds {
-  font-size: 0.9em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind .clouds .weather-icon {
-  width: 30px;
-  margin-left: 5px;
-}
-.weather-block #dynamic-weather .daily-weather {
-  color: #ffffff;
-  width: 100%;
-  font-family: "PoppinsLight", sans-serif;
-  margin-top: 15px;
-  font-size: 1em;
-}
-.weather-block #dynamic-weather .daily-weather .weather-h3 {
-  font-size: 1em;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-  color: #ffffff;
-}
-.weather-block #dynamic-weather .daily-weather .card {
-  border-radius: 8px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  background-color: #0C1218;
-  color: white;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-header {
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-header img {
-  margin-right: 15px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .temperature {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 15px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .temperature .min-temperature {
-  color: #0861aa;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .temperature .max-temperature {
-  color: #f1ab02;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .daily-description {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .daily-description .dynamic-description .description {
-  margin-left: 10px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .daily-description .dynamic-description .weather-icon {
-  width: 40px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .daily-description .rain span {
-  margin-right: 5px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .clouds-wind {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .clouds-wind .weather-icon {
-  margin-left: 10px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .sun {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 30px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .sun .weather-icon {
-  margin-right: 10px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .moon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-}
-.weather-block #dynamic-weather .daily-weather .card .card-body .moon .weather-icon {
-  margin-right: 10px;
-}
-
-.simulator-block {
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.simulator-block .simulator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  border-radius: 10px;
-  border: 1px solid red;
-}
-.simulator-block .simulator .search-and-equipment-container {
-  background-color: #17202A;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 10px;
-}
-.simulator-block .simulator .search-and-equipment-container .search-container .search-bar {
-  position: relative;
-  border-radius: 15px;
-}
-.simulator-block .simulator .search-and-equipment-container .search-container .search-bar #search-input {
-  width: 100%;
-  padding-right: 40px;
-  background: transparent;
-  border: 1px solid #FB7D00;
-  border-radius: 10px;
-  outline: none;
-  color: #ffffff;
-  font-size: 1em;
-}
-.simulator-block .simulator .search-and-equipment-container .search-container .search-bar #search-input::placeholder {
-  color: white;
-}
-.simulator-block .simulator .search-and-equipment-container .search-container .search-bar .input-group-append {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  z-index: 1000;
-  cursor: pointer;
-}
-.simulator-block .simulator .search-and-equipment-container .search-container .search-bar .input-group-append .search-target-btn {
-  border: none;
-  background: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 0;
-}
-.simulator-block .simulator .search-and-equipment-container .search-container .search-bar .input-group-append .search-target-btn i {
-  font-size: 1.2em;
-  cursor: pointer;
-}
-.simulator-block .simulator .search-and-equipment-container .search-container .search-bar .input-group-append .search-target-btn:hover {
-  color: #FB7D00;
-}
-.simulator-block .simulator .search-and-equipment-container .search-container #errorMessage {
-  display: none;
-  color: red;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.simulator-block .simulator .search-and-equipment-container .inputs-container {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px;
-  margin-top: 0;
-}
-.simulator-block .simulator .search-and-equipment-container .inputs-container .text {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-}
-.simulator-block .simulator .search-and-equipment-container .inputs-container #userEquipment {
-  padding: 0;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-}
-.simulator-block .simulator .search-and-equipment-container .inputs-container #userEquipment .dropdown {
-  padding: 0;
-  margin: 10px;
-  width: 100%;
-}
-.simulator-block .simulator .search-and-equipment-container .inputs-container #userEquipment .dropdown select {
-  min-width: 150px;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: #333;
-  font-size: 1em;
-}
-.simulator-block .simulator .search-and-equipment-container .inputs-container #userEquipment .dropdown select option {
-  padding: 10px;
-  font-size: 1em;
-  text-align: center;
-}
-.simulator-block .simulator .search-and-equipment-container .inputs-container #save-framing-btn {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  margin: 20px auto;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #0C1218;
-  color: white;
-  border: 1px solid #FB7D00;
-}
-.simulator-block .simulator .search-and-equipment-container .inputs-container #save-framing-btn:hover {
-  background-color: black;
-}
-.simulator-block .simulator .search-and-equipment-container .cta {
-  margin-left: 40px;
-}
-.simulator-block .simulator .search-and-equipment-container .cta p {
-  text-align: center;
-  margin: 0 auto;
-}
-.simulator-block .simulator .search-and-equipment-container .cta .cta-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-.simulator-block .simulator .search-and-equipment-container .cta .cta-btn a {
-  font-size: 1em;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-  color: #ffffff;
-  color: #ffffff;
-  padding: 5px;
-  width: 120px;
-  text-decoration: none;
-  border: 1px solid #FB7D00;
-  margin: 5px;
-}
-.simulator-block .simulator .search-and-equipment-container .error-message {
-  display: none;
-  color: red;
-  margin-top: 10px;
-}
-.simulator-block .simulator #aladin-container {
-  width: 100%;
-  max-width: 1200px;
-  height: 600px;
-  border-radius: 10px;
-}
-.simulator-block .simulator #aladin-container #aladin-lite-div {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-.simulator-block .simulator #aladin-container #aladin-lite-div .aladin-logo-container a .aladin-logo {
-  width: 60px;
-  max-width: 60px;
-  height: auto;
-  opacity: 0.6;
-}
-.simulator-block .simulator #aladin-container #errorMessage {
-  display: none;
-}
-
-@media (max-width: 767.98px) {
-  main {
-    margin: 0;
-    padding: 0;
-  }
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav .navbar-brand {
-    display: flex;
-    font-size: 1em;
-  }
-  nav .weather-btn {
-    display: none;
-  }
-  nav .navbar-toggler:focus {
-    outline: none;
-    box-shadow: none;
-  }
-  nav .navbar-toggler img {
-    width: 50px;
-  }
-  nav .navbar-nav {
-    text-align: right;
-  }
-  .weather-block {
-    display: none;
-  }
-  .simulator-block {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  main .container-fluid, main .container-xxl, main .container-xl, main .container-lg, main .container-md, main .container-sm {
-    margin: 0;
-    padding: 0;
-  }
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav .navbar-brand {
-    display: flex;
-    font-size: 1em;
-  }
-  nav .weather-btn {
-    display: none;
-  }
-  nav .navbar-toggler:focus {
-    outline: none;
-    box-shadow: none;
-  }
-  nav .navbar-toggler img {
-    width: 50px;
-  }
-  nav .navbar-nav {
-    text-align: right;
-  }
-  .simulator-block {
-    width: 100%;
-  }
-  .weather-block {
-    display: none;
-  }
-}
-*, html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-* body, html body {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -880,7 +7,7 @@ li {
   padding: 0;
   margin: 0;
 }
-* body .home-container, html body .home-container {
+body .home-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -888,48 +15,446 @@ li {
   padding: 0;
   width: 100%;
 }
-* body nav, html body nav {
+body nav {
   border-bottom: 1px solid white;
 }
-* body nav .weather-btn, html body nav .weather-btn {
-  cursor: pointer;
-  outline: none;
-  background-color: transparent;
-  margin-left: 10px;
-}
-* body nav .weather-btn .weather-btn-img, html body nav .weather-btn .weather-btn-img {
-  width: 30px;
-}
-* body nav .navbar-brand, html body nav .navbar-brand {
+body nav .navbar-brand {
   margin-left: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
-* body nav .navbar-brand .logo, html body nav .navbar-brand .logo {
+body nav .navbar-brand .logo {
   width: 2.5em;
   margin-right: 0.6em;
 }
-* body nav .navbar-brand span, html body nav .navbar-brand span {
+body nav .navbar-brand span {
   font-size: 1.2em;
   font-weight: 300;
   font-style: normal;
 }
-* body nav ul li, html body nav ul li {
+body nav ul li {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-* body footer, html body footer {
+body footer {
   color: #ffffff;
   padding: 20px;
   text-align: center;
   margin-top: 50px;
   font-family: "Poppins", sans-serif;
 }
-* body footer .footer-text p, html body footer .footer-text p {
+body footer .footer-text p {
   margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: 0.25;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+
+h1, .h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2, .h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+
+h3, .h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+  h3, .h3 {
+    font-size: 1.75rem;
+  }
+}
+
+h4, .h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  text-decoration-skip-ink: none;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul {
+  padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small, .small {
+  font-size: 0.875em;
+}
+
+mark, .mark {
+  padding: 0.1875em;
+  color: var(--bs-highlight-color);
+  background-color: var(--bs-highlight-bg);
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+a {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: underline;
+}
+a:hover {
+  --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--bs-font-monospace);
+  font-size: 1em;
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  font-size: 0.875em;
+}
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}
+
+code {
+  font-size: 0.875em;
+  color: var(--bs-code-color);
+  word-wrap: break-word;
+}
+a > code {
+  color: inherit;
+}
+
+kbd {
+  padding: 0.1875rem 0.375rem;
+  font-size: 0.875em;
+  color: var(--bs-body-bg);
+  background-color: var(--bs-body-color);
+  border-radius: 0.25rem;
+}
+kbd kbd {
+  padding: 0;
+  font-size: 1em;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--bs-secondary-color);
+  text-align: left;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+label {
+  display: inline-block;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+select {
+  word-wrap: normal;
+}
+select:disabled {
+  opacity: 1;
+}
+
+[list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: inherit;
+}
+@media (min-width: 1200px) {
+  legend {
+    font-size: 1.5rem;
+  }
+}
+legend + * {
+  clear: left;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::file-selector-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+iframe {
+  border: 0;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 /*!
@@ -1147,7 +672,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -12775,6 +12300,890 @@ textarea.form-control-lg {
   }
   .d-print-none {
     display: none !important;
+  }
+}
+.weather-block {
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 330px;
+  width: 330px;
+  margin-left: 15px;
+}
+.weather-block img {
+  width: 25px;
+}
+.weather-block .search-city {
+  background-color: #17202A;
+  height: auto;
+  font-family: "PoppinsLight", sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+}
+.weather-block .search-city h2, .weather-block .search-city .h2 {
+  font-size: 1.2em;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+}
+.weather-block .search-city .search-bar {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.weather-block .search-city .search-bar #searchInput {
+  width: 100%;
+  padding-right: 40px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  outline: none;
+  color: #ffffff;
+  font-size: 1em;
+}
+.weather-block .search-city .search-bar #searchInput::placeholder {
+  color: white;
+}
+.weather-block .search-city .search-bar .input-group-append {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  z-index: 1000;
+  cursor: pointer;
+}
+.weather-block .search-city .search-bar .input-group-append .search-label {
+  display: none;
+}
+.weather-block .search-city .search-bar .input-group-append .search-city-btn {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+}
+.weather-block .search-city .search-bar .input-group-append .search-city-btn i {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.weather-block .search-city .search-bar .input-group-append .search-city-btn:hover {
+  color: #FB7D00;
+}
+.weather-block .search-city .error-msg {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1em;
+}
+.weather-block #dynamic-weather {
+  max-height: 450px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0C1218 #17202A;
+  background-color: #17202A;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+  display: none;
+}
+.weather-block #dynamic-weather .current-weather {
+  color: #ffffff;
+  width: 100%;
+  font-family: "PoppinsLight", sans-serif;
+  margin-top: 15px;
+}
+.weather-block #dynamic-weather .current-weather .weather-h3 {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+.weather-block #dynamic-weather .current-weather .card {
+  border-radius: 8px;
+  margin-top: 15px;
+  background-color: #0C1218;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weather-block #dynamic-weather .current-weather .card .card-header {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.weather-block #dynamic-weather .current-weather .card .card-header .city {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1em;
+}
+.weather-block #dynamic-weather .current-weather .card .card-header .city img {
+  margin-right: 5px;
+  width: 1.3em;
+}
+.weather-block #dynamic-weather .current-weather .card .card-header .gps {
+  font-style: italic;
+  font-size: 12px;
+  padding: 5px;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 1em;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body .current-temperature {
+  margin-top: 10px;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body .current-description {
+  margin-top: 15px;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body .current-description .weather-icon {
+  width: 40px;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-top: 15px;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind .wind {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind .wind .weather-icon {
+  width: 30px;
+  margin-left: 10px;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind .clouds {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-block #dynamic-weather .current-weather .card .card-body .cloud-wind .clouds .weather-icon {
+  width: 30px;
+  margin-left: 5px;
+}
+.weather-block #dynamic-weather .daily-weather {
+  color: #ffffff;
+  width: 100%;
+  font-family: "PoppinsLight", sans-serif;
+  margin-top: 15px;
+  font-size: 1em;
+}
+.weather-block #dynamic-weather .daily-weather .weather-h3 {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+.weather-block #dynamic-weather .daily-weather .card {
+  border-radius: 8px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #0C1218;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-header {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-header img {
+  margin-right: 15px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .temperature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .temperature .min-temperature {
+  color: #0861aa;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .temperature .max-temperature {
+  color: #f1ab02;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .daily-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .daily-description .dynamic-description .description {
+  margin-left: 10px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .daily-description .dynamic-description .weather-icon {
+  width: 40px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .daily-description .rain span {
+  margin-right: 5px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .clouds-wind {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .clouds-wind .weather-icon {
+  margin-left: 10px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .sun {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .sun .weather-icon {
+  margin-right: 10px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .moon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.weather-block #dynamic-weather .daily-weather .card .card-body .moon .weather-icon {
+  margin-right: 10px;
+}
+
+.simulator-block {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.simulator-block .simulator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid red;
+}
+.simulator-block .simulator .search-and-equipment-container {
+  background-color: #17202A;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+}
+.simulator-block .simulator .search-and-equipment-container .search-container .search-bar {
+  position: relative;
+  border-radius: 15px;
+}
+.simulator-block .simulator .search-and-equipment-container .search-container .search-bar #search-input {
+  width: 100%;
+  padding-right: 40px;
+  background: transparent;
+  border: 1px solid #FB7D00;
+  border-radius: 10px;
+  outline: none;
+  color: #ffffff;
+  font-size: 1em;
+}
+.simulator-block .simulator .search-and-equipment-container .search-container .search-bar #search-input::placeholder {
+  color: white;
+}
+.simulator-block .simulator .search-and-equipment-container .search-container .search-bar .input-group-append {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  z-index: 1000;
+  cursor: pointer;
+}
+.simulator-block .simulator .search-and-equipment-container .search-container .search-bar .input-group-append .search-target-btn {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+}
+.simulator-block .simulator .search-and-equipment-container .search-container .search-bar .input-group-append .search-target-btn i {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.simulator-block .simulator .search-and-equipment-container .search-container .search-bar .input-group-append .search-target-btn:hover {
+  color: #FB7D00;
+}
+.simulator-block .simulator .search-and-equipment-container .search-container #errorMessage {
+  display: none;
+  color: red;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.simulator-block .simulator .search-and-equipment-container .inputs-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 0;
+}
+.simulator-block .simulator .search-and-equipment-container .inputs-container .text {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.simulator-block .simulator .search-and-equipment-container .inputs-container #userEquipment {
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.simulator-block .simulator .search-and-equipment-container .inputs-container #userEquipment .dropdown {
+  padding: 0;
+  margin: 10px;
+  width: 100%;
+}
+.simulator-block .simulator .search-and-equipment-container .inputs-container #userEquipment .dropdown select {
+  min-width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 1em;
+}
+.simulator-block .simulator .search-and-equipment-container .inputs-container #userEquipment .dropdown select option {
+  padding: 10px;
+  font-size: 1em;
+  text-align: center;
+}
+.simulator-block .simulator .search-and-equipment-container .inputs-container #save-framing-btn {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #0C1218;
+  color: white;
+  border: 1px solid #FB7D00;
+}
+.simulator-block .simulator .search-and-equipment-container .inputs-container #save-framing-btn:hover {
+  background-color: black;
+}
+.simulator-block .simulator .search-and-equipment-container .cta {
+  margin-left: 40px;
+}
+.simulator-block .simulator .search-and-equipment-container .cta p {
+  text-align: center;
+  margin: 0 auto;
+}
+.simulator-block .simulator .search-and-equipment-container .cta .cta-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.simulator-block .simulator .search-and-equipment-container .cta .cta-btn a {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  color: #ffffff;
+  padding: 5px;
+  width: 120px;
+  text-decoration: none;
+  border: 1px solid #FB7D00;
+  margin: 5px;
+}
+.simulator-block .simulator .search-and-equipment-container .error-message {
+  display: none;
+  color: red;
+  margin-top: 10px;
+}
+.simulator-block .simulator #aladin-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  border-radius: 10px;
+}
+.simulator-block .simulator #aladin-container #aladin-lite-div {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.simulator-block .simulator #aladin-container #aladin-lite-div .aladin-logo-container a .aladin-logo {
+  width: 60px;
+  max-width: 60px;
+  height: auto;
+  opacity: 0.6;
+}
+.simulator-block .simulator #aladin-container #errorMessage {
+  display: none;
+}
+
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.signup-section .signup-content {
+  margin: 60px auto;
+  background-color: #17202A;
+  border-radius: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup-section .signup-content h1, .signup-section .signup-content .h1 {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #ffffff;
+}
+.signup-section .signup-content .signup-form {
+  margin: 0 auto;
+  padding: 15px;
+}
+.signup-section .signup-content .signup-form .form-group {
+  margin: 20px auto;
+}
+.signup-section .signup-content .signup-form .form-group .input-group {
+  width: 100%;
+}
+.signup-section .signup-content .signup-form .form-group .input-group .input-group-text {
+  border: 1px solid #ced4da;
+  border-right: 0;
+  color: #6c757d;
+}
+.signup-section .signup-content .signup-form .form-group .input-group .form-control {
+  width: calc(100% - 40px);
+  border-left: 0;
+}
+.signup-section .signup-content .signup-form .form-group .form-text {
+  color: white;
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+.signup-section .signup-content .signup-form .form-group .text-danger ul {
+  border: 1px solid green;
+  padding: 0;
+  margin: 10px;
+}
+.signup-section .signup-content .signup-form #form-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+.login-section {
+  font-family: "Poppins", sans-serif;
+}
+.login-section .login-content {
+  background-color: #17202A;
+  border-radius: 10px;
+  margin-top: 0;
+}
+.login-section .login-content h1, .login-section .login-content .h1 {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #ffffff;
+}
+.login-section .login-content .login-form {
+  margin: 60px auto;
+  width: 100%;
+  padding: 15px;
+}
+.login-section .login-content .login-form .general-errors {
+  font-size: 0.9em;
+}
+.login-section .login-content .login-form #form-error {
+  font-size: 1.1em;
+  color: #ff3030;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+}
+.login-section .login-content .login-form #form-btn {
+  display: flex;
+  margin: 30px auto 0 auto;
+  font-size: 1em;
+  border: 1px solid white;
+}
+
+.account-section {
+  background-color: #17202A;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  width: 100%;
+}
+.account-section .profile-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+.account-section .profile-header img {
+  width: 50px;
+  margin-right: 40px;
+}
+.account-section .profile-header h1, .account-section .profile-header .h1 {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #ffffff;
+}
+.account-section .goto-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+.account-section .goto-button img {
+  width: 50px;
+  margin-right: 5px;
+}
+.account-section .user-equipment {
+  margin-top: 50px;
+  display: flex;
+}
+.account-section .user-equipment .btn[disabled] {
+  cursor: not-allowed;
+  background-color: #ccc;
+  border-color: #bbb;
+}
+.account-section .user-equipment .equipment-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1em;
+}
+.account-section .user-equipment .equipment-list .card,
+.account-section .user-equipment .equipment-list .no-equipment {
+  background-color: #0C1218;
+  margin: 30px;
+  padding: 0;
+}
+.account-section .user-equipment .equipment-list .card .card-header,
+.account-section .user-equipment .equipment-list .no-equipment .card-header {
+  background-color: #FB7D00;
+  border-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.account-section .user-equipment .equipment-list .card .card-header h2, .account-section .user-equipment .equipment-list .card .card-header .h2,
+.account-section .user-equipment .equipment-list .no-equipment .card-header h2,
+.account-section .user-equipment .equipment-list .no-equipment .card-header .h2 {
+  font-size: 1.2em;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.account-section .user-equipment .equipment-list .card .card-header button img,
+.account-section .user-equipment .equipment-list .no-equipment .card-header button img {
+  width: 25px;
+}
+.account-section .user-equipment .equipment-list .card .list-group,
+.account-section .user-equipment .equipment-list .no-equipment .list-group {
+  padding: 10px;
+  background-color: #0C1218;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0C1218;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details span,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details strong,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-actions,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-actions {
+  margin-left: 25px;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-actions,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-actions {
+  margin-left: 25px;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details span,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details strong,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+}
+.account-section .user-equipment .equipment-list .card .list-group .list-group-item img,
+.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item img {
+  width: 20px;
+  max-width: 20px;
+}
+.account-section .user-equipment .equipment-list .card-body-empty {
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-custom {
+  max-width: 450px;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content {
+  background-color: #1C2733;
+  border-color: #0C1218;
+  border-radius: 10px;
+  color: white;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header {
+  border-bottom: 1px solid #dee2e6;
+  color: white;
+  background-color: #FB7D00;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .modal-title {
+  font-size: 1.2em;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  color: #FFFFFF;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close {
+  filter: invert(1);
+  opacity: 0.7;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close:hover {
+  opacity: 1;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close:focus {
+  box-shadow: none;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form {
+  padding: 20px;
+  color: #FFFFFF;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group .form-label {
+  font-family: Poppins, sans-serif;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group .form-control {
+  border: 1px solid lightgray;
+  background-color: #1C2733;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  border-radius: 10px;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group {
+  width: 50%;
+  margin: 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend span {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend span i {
+  color: white;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend input {
+  width: 40%;
+  border-radius: 10px;
+}
+.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-btn {
+  background-color: transparent;
+  color: #ffffff;
+  outline: 1px solid #FFFFFF;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+@media (max-width: 767.98px) {
+  main {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .navbar-brand {
+    display: flex;
+    font-size: 1em;
+  }
+  nav .weather-btn {
+    display: none;
+  }
+  nav .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  nav .navbar-toggler img {
+    width: 50px;
+  }
+  nav .navbar-nav {
+    text-align: right;
+  }
+  .weather-block {
+    display: none;
+  }
+  .simulator-block {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  main .container-fluid, main .container-sm, main .container-md, main .container-lg, main .container-xl, main .container-xxl {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .navbar-brand {
+    display: flex;
+    font-size: 1em;
+  }
+  nav .weather-btn {
+    display: none;
+  }
+  nav .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  nav .navbar-toggler img {
+    width: 50px;
+  }
+  nav .navbar-nav {
+    text-align: right;
+  }
+  .simulator-block {
+    width: 100%;
+  }
+  .weather-block {
+    display: none;
   }
 }
 
