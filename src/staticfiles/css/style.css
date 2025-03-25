@@ -7,7 +7,12 @@ body {
   padding: 0;
   margin: 0;
 }
-body .home-container {
+
+main {
+  flex: 1;
+}
+
+.home-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,38 +20,36 @@ body .home-container {
   padding: 0;
   width: 100%;
 }
-body nav {
+
+nav {
   border-bottom: 1px solid white;
 }
-body nav .navbar-brand {
+nav .navbar-brand {
   margin-left: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
-body nav .navbar-brand .logo {
+nav .navbar-brand .logo {
   width: 2.5em;
   margin-right: 0.6em;
 }
-body nav .navbar-brand span {
+nav .navbar-brand span {
   font-size: 1.2em;
   font-weight: 300;
   font-style: normal;
 }
-body nav ul li {
+nav ul li {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-body footer {
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
+
+footer {
   font-family: "Poppins", sans-serif;
 }
-body footer .footer-text p {
+footer .footer-text p {
   margin: 0 auto;
 }
 
@@ -12859,29 +12862,16 @@ li {
 }
 
 .account-section {
-  background-color: #17202A;
   border-radius: 10px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: "Open Sans", sans-serif;
-  padding: 0;
-  width: 100%;
+}
+.account-section img {
+  width: 50px;
 }
 .account-section .profile-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   margin-top: 30px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-}
-.account-section .profile-header img {
-  width: 50px;
-  margin-right: 40px;
 }
 .account-section .profile-header h1, .account-section .profile-header .h1 {
   text-align: center;
@@ -12892,228 +12882,20 @@ li {
   color: #ffffff;
 }
 .account-section .goto-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1em;
   color: #FFFFFF;
   margin-top: 30px;
 }
-.account-section .goto-button img {
-  width: 50px;
-  margin-right: 5px;
-}
 .account-section .user-equipment {
-  margin-top: 50px;
-  display: flex;
+  border: 1px solid white;
 }
 .account-section .user-equipment .btn[disabled] {
   cursor: not-allowed;
-  background-color: #ccc;
+  background-color: red;
   border-color: #bbb;
 }
-.account-section .user-equipment .equipment-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-size: 1em;
-}
-.account-section .user-equipment .equipment-list .card,
-.account-section .user-equipment .equipment-list .no-equipment {
-  background-color: #0C1218;
-  margin: 30px;
-  padding: 0;
-}
-.account-section .user-equipment .equipment-list .card .card-header,
-.account-section .user-equipment .equipment-list .no-equipment .card-header {
-  background-color: #FB7D00;
-  border-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-.account-section .user-equipment .equipment-list .card .card-header h2, .account-section .user-equipment .equipment-list .card .card-header .h2,
-.account-section .user-equipment .equipment-list .no-equipment .card-header h2,
-.account-section .user-equipment .equipment-list .no-equipment .card-header .h2 {
-  font-size: 1.2em;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-}
-.account-section .user-equipment .equipment-list .card .card-header button img,
-.account-section .user-equipment .equipment-list .no-equipment .card-header button img {
-  width: 25px;
-}
-.account-section .user-equipment .equipment-list .card .list-group,
-.account-section .user-equipment .equipment-list .no-equipment .list-group {
-  padding: 10px;
-  background-color: #0C1218;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item {
-  color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0C1218;
-  margin-top: 10px;
-  padding-bottom: 20px;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details span,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details span {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-details strong,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-details strong {
-  font-family: "Poppins", sans-serif;
-  font-size: 1em;
-  font-weight: 200;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .telescope-actions,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .telescope-actions {
-  margin-left: 25px;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-actions,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-actions {
-  margin-left: 25px;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details span,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details span {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item .camera-details strong,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item .camera-details strong {
-  font-family: "Poppins", sans-serif;
-  font-size: 1em;
-  font-weight: 200;
-}
-.account-section .user-equipment .equipment-list .card .list-group .list-group-item img,
-.account-section .user-equipment .equipment-list .no-equipment .list-group .list-group-item img {
-  width: 20px;
-  max-width: 20px;
-}
-.account-section .user-equipment .equipment-list .card-body-empty {
-  margin-top: 20px;
-  font-size: 1.1em;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-custom {
-  max-width: 450px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content {
-  background-color: #1C2733;
-  border-color: #0C1218;
-  border-radius: 10px;
-  color: white;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header {
-  border-bottom: 1px solid #dee2e6;
-  color: white;
-  background-color: #FB7D00;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .modal-title {
-  font-size: 1.2em;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  color: #FFFFFF;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close {
-  filter: invert(1);
-  opacity: 0.7;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close:hover {
-  opacity: 1;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-header .btn-close:focus {
-  box-shadow: none;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form {
-  padding: 20px;
-  color: #FFFFFF;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group .form-label {
-  font-family: Poppins, sans-serif;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-group .form-control {
-  border: 1px solid lightgray;
-  background-color: #1C2733;
-  color: #FFFFFF;
-  border-radius: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  border-radius: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group {
-  width: 50%;
-  margin: 0;
-  border-radius: 10px;
-  padding: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  z-index: 1000;
-  cursor: pointer;
-  border-radius: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend span {
-  background-color: transparent;
-  outline: none;
-  border: none;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend span i {
-  color: white;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .resolution .input-group .input-group-prepend input {
-  width: 40%;
-  border-radius: 10px;
-}
-.account-section .user-equipment #modalPlaceholder .modal .modal-content .modal-body form .form-btn {
-  background-color: transparent;
-  color: #ffffff;
-  outline: 1px solid #FFFFFF;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 20px auto;
+.account-section .user-equipment .card {
+  background-color: #17202A;
 }
 
 @media (max-width: 767.98px) {

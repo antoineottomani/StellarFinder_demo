@@ -3,21 +3,26 @@
 {% block title %}Compte démo{% endblock %}
 
 {% block content %}
-<div class="container-fluid row">
-  <section class="account-section">
-    <div class="profile-header">
-      <img src="{% static 'img/user.svg' %}" alt="icone de profil pour utilisateur" />
-      <h1>Bienvenue sur le compte de démo</h1>
-    </div>
+<div class="container">
+  <section class="account-section row bg-secondary py-4">
 
-    <div class="goto-button">
-      <a href="{% url 'accueil' %}" class="btn btn-primary">
-        <img src="{% static 'img/rocket.svg' %}" alt="icone pour voir simulateur" />
-        Voir le simulateur
-      </a>
-    </div>
+    <div class="col-12 col-md-8 mx-auto">
 
-    {% include 'equipment/demo_materiel.html' %}
+      <div class="profile-header text-center d-flex align-items-center justify-content-center">
+        <img src="{% static 'img/user.svg' %}" class="img-fluid rounded-circle" alt="icone de profil pour utilisateur" />
+        <h1>Bienvenue sur le compte de démo</h1>
+      </div>
+
+      <div class="goto-button d-flex justify-content-center mt-4">
+        <a href="{% url 'accueil' %}" class="btn btn-primary d-flex align-items-center">
+          <img src="{% static 'img/rocket.svg' %}" alt="icone pour voir simulateur" class="mr-2" />
+          Voir le simulateur
+        </a>
+      </div>
+
+      {% include 'equipment/demo_materiel.html' %}
+
+    </div>
   </section>
 </div>
 {% endblock content %}

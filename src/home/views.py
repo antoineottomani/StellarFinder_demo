@@ -7,6 +7,8 @@ import datetime
 import requests
 import json
 import pathlib
+from django.views.decorators.csrf import csrf_exempt
+from urllib.parse import urlparse
 
 env = environ.Env()
 
@@ -104,18 +106,14 @@ def fetch_weather_data(city, api_key, weather_url):
 
 
 def proxy_to_aladin(request):
-    target_url = request.GET.get(
-        'url', 'https://aladin.u-strasbg.fr/AladinLite/api')
+    target_url = "https://irsa.ipac.caltech.edu/data/hips/CDS/DSS2/color/properties"
 
     response = requests.get(target_url)
 
-    http_response = HttpResponse(
-        response.content, content_type=response.headers['Content-Type'])
-
-    http_response['Access-Control-Allow-Origin'] = '*'
-    http_response['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
-    http_response['Access-Control-Allow-Headers'] = 'Content-Type'
-    return http_response
+    if response.status_code == 200:
+        return JsonResponse(response.json(), safe=False)
+    else:
+        return JsonResponse({"error": "Problème lors de la récupération des données"}, status=response.status_code)
 
 
 class FetchEquipment(View):

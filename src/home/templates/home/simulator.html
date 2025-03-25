@@ -8,6 +8,8 @@
 
 			<!-- Search star into aladin database -->
 			<div class="search-container" id="search-container">
+				<label for="search-input" class="sr-only">Nom de l'astre :</label>
+
 				<div class="input-group search-bar">
 					<input type="text" id="search-input" class="form-control" placeholder="Entrez le nom d'un astre">
 					<div class="input-group-append">
@@ -16,7 +18,7 @@
 						</button>
 					</div>
 				</div>
-				<div id="errorMessage" class="error-message text-danger mt-2"></div>
+				<div id="searchErrorMessage" class="error-message text-danger mt-2"></div>
 			</div>
 
 		</div>
@@ -27,13 +29,17 @@
 			<div class="inputs-container">
 
 				<div class="text">Choix du matériel :
-					<div id="Equipment" data-url-equipment="{% url 'equipement' %}">
+					<div id="Equipment">
 						<div class="dropdown mb-2">
-							<select id="telescopes" class="form-control"></select>
+							<select id="telescopes" class="form-control">
+								<option value="">Télescopes</option>
+							</select>
 						</div>
 
 						<div class="dropdown">
-							<select id="cameras" class="form-control"></select>
+							<select id="cameras" class="form-control">
+								<option value="">Imageurs</option>
+							</select>
 						</div>
 					</div>
 				</div>
@@ -54,13 +60,9 @@
 	<input type="hidden" id="fov-height">
 	<input type="hidden" id="ra">
 	<input type="hidden" id="dec">
-	<input type="hidden" id="stellar-name">
-	<input type="hidden" id="catalog-name">
-	<input type="hidden" id="constellation">
-	<input type="hidden" id="meridien">
 
 	<div id="aladin-container" class="container">
 		<div id="aladin-lite-div"></div>
-		<div id="errorMessage" class="alert alert-danger"></div>
+		<div id="aladinErrorMessage" class="d-none alert alert-danger"></div>
 	</div>
 </div>

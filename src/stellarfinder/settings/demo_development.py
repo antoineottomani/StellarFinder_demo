@@ -5,6 +5,7 @@ environ.Env.read_env(env_file=str(BASE_DIR / "stellarfinder/.env"))
 INSTALLED_APPS += [
     'livereload',
     'debug_toolbar',
+    # 'corsheaders',
 ]
 
 DEBUG = True
@@ -14,6 +15,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 MIDDLEWARE += [
     'livereload.middleware.LiveReloadScript',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+
 ]
 
 INTERNAL_IPS = ['127.0.0.1']
@@ -29,3 +31,8 @@ DATABASES = {
         'PORT': env('DATABASE_PORT'),
     }
 }
+
+# Configuration for CORS headers
+# CORS_ALLOWED_ORIGINS = [
+
+# ]
