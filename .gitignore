@@ -27,5 +27,6 @@ env/
 *.bak
 *.swp
 
-# Bootstrap files
-src/staticfiles/scss/Bootstrap/
+node_modules/
+
+*.css.map
