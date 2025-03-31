@@ -37,4 +37,4 @@ jobs:
           eb use ${{ secrets.EB_ENVIRONMENT_NAME }}
 
       - name: Deploy to Elastic Beanstalk
-        run: eb deploy --version="v-${GITHUB_SHA:0:7}-$(date +'%Y%m%d-%H%M%S')"
+        run: eb deploy
