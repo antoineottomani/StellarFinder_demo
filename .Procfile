@@ -1,1 +1,1 @@
-web: gunicorn stellarfinder.wsgi --log-file -
+web: gunicorn src.stellarfinder.wsgi --log-file -
