@@ -34,3 +34,8 @@ node_modules/
 # demo development settings
 src/stellarfinder/settings/demo_development.py 
 
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
