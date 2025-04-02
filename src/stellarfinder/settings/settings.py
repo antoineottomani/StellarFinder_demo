@@ -44,7 +44,7 @@ TEMPLATES = [
         'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
-            'debug': True,
+            'debug': DEBUG,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -71,18 +71,11 @@ USE_L10N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-STATICFILES_DIRS = [BASE_DIR / "staticfiles"]
 STATIC_URL = '/static/'
 
-# Media files (Uploaded files)
-MEDIA_URL = '/media/'
-# MEDIA_ROOT = [BASE_DIR / 'media']
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Custom user model
-AUTH_USER_MODEL = 'users.CustomUser'
 
 # URL to redirect after connexion success
 LOGIN_REDIRECT_URL = 'mon-compte'
