@@ -10,7 +10,7 @@ env = environ.Env()
 environ.Env.read_env(env_file=str(BASE_DIR / "stellarfinder/.env"))
 
 
-SECRET_KEY = env('DJANGO_SECRET_KEY')
+SECRET_KEY = env('DJANGO_SECRET_KEY', default='fallback-secret-key')
 DEBUG = env('DEBUG', default=False)
 ALLOWED_HOSTS = []
 
