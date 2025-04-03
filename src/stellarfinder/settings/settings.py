@@ -1,18 +1,15 @@
 from pathlib import Path
-import environ
+import os
 
 # Global settings for production & development environments in demo version
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
-env = environ.Env()
-environ.Env.read_env(env_file=str(BASE_DIR / "stellarfinder/.env"))
-
-
-SECRET_KEY = env('DJANGO_SECRET_KEY', default='fallback-secret-key')
-DEBUG = env('DEBUG', default=False)
-ALLOWED_HOSTS = env('DJANGO_ALLOWED_HOSTS', default='localhost').split(',')
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default='fallback-secret-key')
+DEBUG = os.getenv('DEBUG', default='False')
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS',
+                          default='localhost').split(',')
 
 DEMO_DATA_PATH = BASE_DIR / "equipment/demo_data.json"
 
