@@ -12,7 +12,6 @@ environ.Env.read_env(env_file=str(BASE_DIR / "stellarfinder/.env"))
 
 SECRET_KEY = env('DJANGO_SECRET_KEY', default='fallback-secret-key')
 DEBUG = env('DEBUG', default=False)
-ALLOWED_HOSTS = []
 
 DEMO_DATA_PATH = BASE_DIR / "equipment/demo_data.json"
 
