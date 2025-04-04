@@ -8,8 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default='fallback-secret-key')
 DEBUG = os.getenv('DEBUG', default='False')
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS',
-                          default='localhost').split(',')
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', "").split(',')
 
 DEMO_DATA_PATH = BASE_DIR / "equipment/demo_data.json"
 

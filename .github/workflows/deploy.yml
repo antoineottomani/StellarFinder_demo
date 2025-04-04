@@ -36,7 +36,3 @@ jobs:
           eb init -p python-3.12 ${{ secrets.EB_APPLICATION_NAME }} --region ${{ secrets.AWS_DEFAULT_REGION }}
           eb use ${{ secrets.EB_ENVIRONMENT_NAME }}
           eb deploy
-
-      # - name: Collect static files
-      #   run: |
-      #     python manage.py collectstatic --noinput
