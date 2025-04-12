@@ -1,14 +1,14 @@
 from pathlib import Path
 import os
+import environ
 
 # Global settings for production & development environments in demo version
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+env = environ.Env()
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default='fallback-secret-key')
-DEBUG = os.getenv('DEBUG', default='False')
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', "").split(',')
+DEBUG = env.bool('DEBUG', default=False)
 
 DEMO_DATA_PATH = BASE_DIR / "equipment/demo_data.json"
 
@@ -54,7 +54,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'stellarfinder.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = []
-
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 ROOT_URLCONF = 'stellarfinder.urls'
@@ -68,7 +67,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

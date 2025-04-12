@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import sys
-import environ
 import os
 
 
 def main():
     """Run administrative tasks."""
 
-    environment = os.getenv('DJANGO_ENV', default='development')
+    environment = os.getenv('DJANGO_ENV', default='production')
 
     # Load the correct settings file
     if environment == 'production':
