@@ -15,15 +15,17 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Ajoute src au PYTHONPATH pour que Python trouve les modules
 ENV PYTHONPATH="/app/src"
 
-# Collecte les fichiers statiques
-RUN python src/manage.py collectstatic --noinput
-
 # Définir les variables d'environnement
 ENV DJANGO_ENV=production
 
-# Exposer le port 8000
-EXPOSE 8000
+# Copier le script d'entrée
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-# Lancer le serveur Gunicorn
-CMD ["gunicorn", "stellarfinder.wsgi:application", "--chdir", "src", "--bind", "0.0.0.0:8000"]
+# Le conteneur démarrera via ce script
+ENTRYPOINT ["/entrypoint.sh"]
+
+
+
+
 
