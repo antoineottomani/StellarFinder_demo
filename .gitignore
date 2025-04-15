@@ -29,12 +29,9 @@ env/
 
 node_modules/
 
-*.css.map
-
 # demo development settings
 src/stellarfinder/settings/demo_development.py 
 src/stellarfinder/asgi.py
-
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
