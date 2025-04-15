@@ -1,7 +1,5 @@
-FROM python:3.12-alpine
+FROM python:3.13-alpine
 
-
-RUN apt-get update && apt-get upgrade -y && apt-get clean
 # Installer les dépendances système nécessaires
 RUN apk add --no-cache gcc musl-dev libffi-dev openssl-dev
 
@@ -20,11 +18,12 @@ ENV PYTHONPATH="/app/src"
 # Collecte les fichiers statiques
 RUN python src/manage.py collectstatic --noinput
 
+# Définir les variables d'environnement
 ENV DJANGO_ENV=production
+
+# Exposer le port 8000
 EXPOSE 8000
 
-# Définir les variables d'env
-ENV DJANGO_ENV=development
-
+# Lancer le serveur Gunicorn
 CMD ["gunicorn", "stellarfinder.wsgi:application", "--chdir", "src", "--bind", "0.0.0.0:8000"]
 

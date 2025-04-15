@@ -8,21 +8,22 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      AWS_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+      ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
+      EB_APP_NAME: ${{ secrets.EB_APPLICATION_NAME }}
+      EB_ENV_NAME: ${{ secrets.EB_ENVIRONMENT_NAME }}
+      IMAGE_TAG: latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
+      - name: Install EB CLI
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install awsebcli
+          pip install --user awsebcli
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -31,8 +32,38 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
+      - name: Login to Amazon ECR
+        run: |
+          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
+
+      - name: Build Docker image
+        run: |
+          docker build -t $ECR_REPOSITORY:$IMAGE_TAG .
+
+      - name: Tag Docker image
+        run: |
+          docker tag $ECR_REPOSITORY:$IMAGE_TAG ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
+
+      - name: Push to Amazon ECR
+        run: |
+          docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
+
+      - name: Generate Dockerrun.aws.json
+        run: |
+          echo '{
+            "AWSEBDockerrunVersion": 2,
+            "Image": {
+              "Name": "'${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPOSITORY}:${IMAGE_TAG}'",
+              "Update": "true"
+            },
+            "Ports": [
+              {
+                "ContainerPort": 8000
+              }
+            ]
+          }' > Dockerrun.aws.json
+
       - name: Deploy to Elastic Beanstalk
         run: |
-          eb init -p python-3.12 ${{ secrets.EB_APPLICATION_NAME }} --region ${{ secrets.AWS_DEFAULT_REGION }}
-          eb use ${{ secrets.EB_ENVIRONMENT_NAME }}
+          eb use $EB_ENV_NAME
           eb deploy
