@@ -17,6 +17,7 @@ ENV PYTHONPATH="/app/src"
 
 # Définir les variables d'environnement
 ENV DJANGO_ENV=production
+EXPOSE 8000
 
 # Copier le script d'entrée
 COPY entrypoint.sh /entrypoint.sh
@@ -24,8 +25,3 @@ RUN chmod +x /entrypoint.sh
 
 # Le conteneur démarrera via ce script
 ENTRYPOINT ["/entrypoint.sh"]
-
-
-
-
-
