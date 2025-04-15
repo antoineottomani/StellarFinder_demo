@@ -39,4 +39,5 @@ src/stellarfinder/asgi.py
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/config.yml
 !.elasticbeanstalk/*.global.yml
