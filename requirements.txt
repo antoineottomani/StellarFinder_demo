@@ -7,6 +7,7 @@ idna==3.6
 packaging==24.2
 python-environ==0.4.54
 requests==2.31.0
+sqlparse==0.5.3
 tornado==6.4
 urllib3==2.2.1
-sqlparse==0.5.3
+whitenoise==6.9.0
