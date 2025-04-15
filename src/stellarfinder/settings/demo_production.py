@@ -6,7 +6,9 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
 
 # Collect static files for production
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 
 # Sécurité recommandée
