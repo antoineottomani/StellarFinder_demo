@@ -54,7 +54,7 @@ jobs:
             "AWSEBDockerrunVersion": 2,
             "Image": {
               "Name": "'${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPOSITORY}:${IMAGE_TAG}'",
-              "Update": "true"
+              "Update": "true",
             },
             "Ports": [
               {
