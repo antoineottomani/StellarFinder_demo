@@ -1,8 +1,8 @@
 branch-defaults:
   demo:
-    environment: StellarFinder-env
+    environment: stellarfinder-demo
 environment-defaults:
-  StellarFinder-env:
+  stellarfinder-demo:
     branch: null
     repository: null
 global:
