@@ -1,16 +1,13 @@
 # Automatically generated folders and files
 __pycache__/
-.pyc
+*.pyc
 .DS_Store
 Thumbs.db
 
 # Development environment specific files
 *.env
-*.pyc
 .python-version
 **/migrations/
-
-# Virtual environment specific files
 venv/
 env/
 .env/
@@ -19,15 +16,17 @@ env/
 .vscode/
 .idea/
 
-# Log files
+# Log and backup files
 *.log
-
-# Backup files
 *~
 *.bak
 *.swp
 
+# Frontend dependencies
 node_modules/
+
+# Frontend build files
+src/static/css/
 
 # demo development settings
 src/stellarfinder/settings/demo_development.py 
@@ -38,3 +37,5 @@ src/stellarfinder/asgi.py
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/config.yml
 !.elasticbeanstalk/*.global.yml
+
+

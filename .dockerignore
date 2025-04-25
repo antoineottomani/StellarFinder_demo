@@ -1,12 +1,43 @@
-__pycache__
+# Automatically generated folders and files
+__pycache__/
 *.pyc
-*.pyo
-*.pyd
-*.db
-*.sqlite3
-.env
-.git
-.gitignore
-node_modules
 .DS_Store
 Thumbs.db
+
+# Development environment specific files
+*.env
+.python-version
+**/migrations/
+venv/
+env/
+.env
+
+# Code editor specific files
+.vscode/
+.idea/
+
+# Log & backup files
+*.log
+*~
+*.bak
+*.swp
+
+# Frontend dependencies
+node_modules/
+
+# Frontend build files
+src/static/css/
+
+# demo development settings
+src/stellarfinder/settings/demo_development.py
+src/stellarfinder/asgi.py
+
+# Git repo & metadata
+.git/
+.gitignore
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/config.yml
+!.elasticbeanstalk/*.global.yml
